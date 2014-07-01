@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="d1a9e3c8-01e0-4060-aab0-0b0a5dc0c344" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies>
+      <ReferencedAssembly AssemblyName="Oleit.AS.Service.DataObject" />
+      <ReferencedAssembly AssemblyName="Oleit.AS.Service.LogicService" />
+    </ReferencedAssemblies>
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:53695/PropertiesService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="PropertiesService.wsdl" MetadataType="Wsdl" ID="eae40639-edb1-412f-a29a-5bb411440c58" SourceId="1" SourceUrl="http://localhost:53695/PropertiesService.svc?wsdl" />
+    <MetadataFile FileName="PropertiesService.xsd" MetadataType="Schema" ID="28756bed-d535-48f5-a537-f6e88d2a9aa8" SourceId="1" SourceUrl="http://localhost:53695/PropertiesService.svc?xsd=xsd2" />
+    <MetadataFile FileName="PropertiesService.disco" MetadataType="Disco" ID="e1078450-bac9-4919-8396-39162f023308" SourceId="1" SourceUrl="http://localhost:53695/PropertiesService.svc?disco" />
+    <MetadataFile FileName="PropertiesService1.xsd" MetadataType="Schema" ID="e0160ab8-8031-457a-b3a7-fbc2c06f4f60" SourceId="1" SourceUrl="http://localhost:53695/PropertiesService.svc?xsd=xsd0" />
+    <MetadataFile FileName="PropertiesService2.xsd" MetadataType="Schema" ID="90097560-6f2f-4e52-a61a-d027e6856267" SourceId="1" SourceUrl="http://localhost:53695/PropertiesService.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

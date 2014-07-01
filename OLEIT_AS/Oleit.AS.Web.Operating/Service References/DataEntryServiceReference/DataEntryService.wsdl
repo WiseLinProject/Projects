@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="DataEntryService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:53695/DataEntryService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:53695/DataEntryService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:53695/DataEntryService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Oleit.AS.Service.DataObject" />
+      <xsd:import schemaLocation="http://localhost:53695/DataEntryService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IDataEntryService_InsertRecord_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertRecord" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntryService_InsertRecord_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertRecordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntryService_SaveRecord_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveRecord" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntryService_SaveRecord_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveRecordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntryService_InsertTransfer_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertTransfer" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntryService_InsertTransfer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertTransferResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntryService_UpdateRecord_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRecord" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntryService_UpdateRecord_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRecordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntryService_LoadRecord_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadRecord" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntryService_LoadRecord_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadRecordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntryService_LoadRecordByPeriodEntityID_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadRecordByPeriodEntityID" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntryService_LoadRecordByPeriodEntityID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadRecordByPeriodEntityIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntryService_GetRecordList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRecordList" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntryService_GetRecordList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRecordListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntryService_Approve_InputMessage">
+    <wsdl:part name="parameters" element="tns:Approve" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntryService_Approve_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ApproveResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntryService_Avoid_InputMessage">
+    <wsdl:part name="parameters" element="tns:Avoid" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntryService_Avoid_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AvoidResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntryService_LoadTransaction_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadTransaction" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntryService_LoadTransaction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntryService_LoadTransactionByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadTransactionByID" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntryService_LoadTransactionByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadTransactionByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntryService_LoadTransactionByPeriodID_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadTransactionByPeriodID" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntryService_LoadTransactionByPeriodID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadTransactionByPeriodIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntryService_InsertTransaction_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertTransaction" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntryService_InsertTransaction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntryService_SetNotices_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetNotices" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntryService_SetNotices_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetNoticesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntryService_SetConfirm_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetConfirm" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntryService_SetConfirm_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetConfirmResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntryService_Updatetransaction_InputMessage">
+    <wsdl:part name="parameters" element="tns:Updatetransaction" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntryService_Updatetransaction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatetransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntryService_GetjournalSum_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetjournalSum" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntryService_GetjournalSum_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetjournalSumResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IDataEntryService">
+    <wsdl:operation name="InsertRecord">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataEntryService/InsertRecord" message="tns:IDataEntryService_InsertRecord_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataEntryService/InsertRecordResponse" message="tns:IDataEntryService_InsertRecord_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveRecord">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataEntryService/SaveRecord" message="tns:IDataEntryService_SaveRecord_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataEntryService/SaveRecordResponse" message="tns:IDataEntryService_SaveRecord_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertTransfer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataEntryService/InsertTransfer" message="tns:IDataEntryService_InsertTransfer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataEntryService/InsertTransferResponse" message="tns:IDataEntryService_InsertTransfer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRecord">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataEntryService/UpdateRecord" message="tns:IDataEntryService_UpdateRecord_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataEntryService/UpdateRecordResponse" message="tns:IDataEntryService_UpdateRecord_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadRecord">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataEntryService/LoadRecord" message="tns:IDataEntryService_LoadRecord_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataEntryService/LoadRecordResponse" message="tns:IDataEntryService_LoadRecord_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadRecordByPeriodEntityID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataEntryService/LoadRecordByPeriodEntityID" message="tns:IDataEntryService_LoadRecordByPeriodEntityID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataEntryService/LoadRecordByPeriodEntityIDResponse" message="tns:IDataEntryService_LoadRecordByPeriodEntityID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRecordList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataEntryService/GetRecordList" message="tns:IDataEntryService_GetRecordList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataEntryService/GetRecordListResponse" message="tns:IDataEntryService_GetRecordList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Approve">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataEntryService/Approve" message="tns:IDataEntryService_Approve_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataEntryService/ApproveResponse" message="tns:IDataEntryService_Approve_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Avoid">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataEntryService/Avoid" message="tns:IDataEntryService_Avoid_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataEntryService/AvoidResponse" message="tns:IDataEntryService_Avoid_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadTransaction">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataEntryService/LoadTransaction" message="tns:IDataEntryService_LoadTransaction_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataEntryService/LoadTransactionResponse" message="tns:IDataEntryService_LoadTransaction_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadTransactionByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataEntryService/LoadTransactionByID" message="tns:IDataEntryService_LoadTransactionByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataEntryService/LoadTransactionByIDResponse" message="tns:IDataEntryService_LoadTransactionByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadTransactionByPeriodID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataEntryService/LoadTransactionByPeriodID" message="tns:IDataEntryService_LoadTransactionByPeriodID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataEntryService/LoadTransactionByPeriodIDResponse" message="tns:IDataEntryService_LoadTransactionByPeriodID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertTransaction">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataEntryService/InsertTransaction" message="tns:IDataEntryService_InsertTransaction_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataEntryService/InsertTransactionResponse" message="tns:IDataEntryService_InsertTransaction_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetNotices">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataEntryService/SetNotices" message="tns:IDataEntryService_SetNotices_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataEntryService/SetNoticesResponse" message="tns:IDataEntryService_SetNotices_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetConfirm">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataEntryService/SetConfirm" message="tns:IDataEntryService_SetConfirm_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataEntryService/SetConfirmResponse" message="tns:IDataEntryService_SetConfirm_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Updatetransaction">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataEntryService/Updatetransaction" message="tns:IDataEntryService_Updatetransaction_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataEntryService/UpdatetransactionResponse" message="tns:IDataEntryService_Updatetransaction_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetjournalSum">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataEntryService/GetjournalSum" message="tns:IDataEntryService_GetjournalSum_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataEntryService/GetjournalSumResponse" message="tns:IDataEntryService_GetjournalSum_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IDataEntryService" type="tns:IDataEntryService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="InsertRecord">
+      <soap:operation soapAction="http://tempuri.org/IDataEntryService/InsertRecord" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveRecord">
+      <soap:operation soapAction="http://tempuri.org/IDataEntryService/SaveRecord" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertTransfer">
+      <soap:operation soapAction="http://tempuri.org/IDataEntryService/InsertTransfer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRecord">
+      <soap:operation soapAction="http://tempuri.org/IDataEntryService/UpdateRecord" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadRecord">
+      <soap:operation soapAction="http://tempuri.org/IDataEntryService/LoadRecord" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadRecordByPeriodEntityID">
+      <soap:operation soapAction="http://tempuri.org/IDataEntryService/LoadRecordByPeriodEntityID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRecordList">
+      <soap:operation soapAction="http://tempuri.org/IDataEntryService/GetRecordList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Approve">
+      <soap:operation soapAction="http://tempuri.org/IDataEntryService/Approve" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Avoid">
+      <soap:operation soapAction="http://tempuri.org/IDataEntryService/Avoid" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadTransaction">
+      <soap:operation soapAction="http://tempuri.org/IDataEntryService/LoadTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadTransactionByID">
+      <soap:operation soapAction="http://tempuri.org/IDataEntryService/LoadTransactionByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadTransactionByPeriodID">
+      <soap:operation soapAction="http://tempuri.org/IDataEntryService/LoadTransactionByPeriodID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertTransaction">
+      <soap:operation soapAction="http://tempuri.org/IDataEntryService/InsertTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetNotices">
+      <soap:operation soapAction="http://tempuri.org/IDataEntryService/SetNotices" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetConfirm">
+      <soap:operation soapAction="http://tempuri.org/IDataEntryService/SetConfirm" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Updatetransaction">
+      <soap:operation soapAction="http://tempuri.org/IDataEntryService/Updatetransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetjournalSum">
+      <soap:operation soapAction="http://tempuri.org/IDataEntryService/GetjournalSum" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DataEntryService">
+    <wsdl:port name="BasicHttpBinding_IDataEntryService" binding="tns:BasicHttpBinding_IDataEntryService">
+      <soap:address location="http://localhost:53695/DataEntryService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

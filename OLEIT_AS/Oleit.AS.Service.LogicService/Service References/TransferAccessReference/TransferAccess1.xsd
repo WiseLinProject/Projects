@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:57693/TransferAccess.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Oleit.AS.Service.DataObject" />
+  <xs:element name="Insert">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Oleit.AS.Service.DataObject" minOccurs="0" name="record" nillable="true" type="q1:Record" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Oleit.AS.Service.DataObject" minOccurs="0" name="transfer" nillable="true" type="q2:Transfer" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertDetail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Oleit.AS.Service.DataObject" minOccurs="0" name="transferdetail" nillable="true" type="q3:TransferDetail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertDetailResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Update">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Oleit.AS.Service.DataObject" minOccurs="0" name="transfer" nillable="true" type="q4:Transfer" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateDetail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Oleit.AS.Service.DataObject" minOccurs="0" name="transferdetail" nillable="true" type="q5:TransferDetail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateDetailResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateDetailCollection">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Oleit.AS.Service.DataObject" minOccurs="0" name="transferdetailcollection" nillable="true" type="q6:ArrayOfTransferDetail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateDetailCollectionResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Query">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="recordID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Oleit.AS.Service.DataObject" minOccurs="0" name="QueryResult" nillable="true" type="q7:ArrayOfTransfer" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryDetailCollection">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="recordID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryDetailCollectionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Oleit.AS.Service.DataObject" minOccurs="0" name="QueryDetailCollectionResult" nillable="true" type="q8:ArrayOfTransferDetail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryCollectionByToEntityID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EntityID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryCollectionByToEntityIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Oleit.AS.Service.DataObject" minOccurs="0" name="QueryCollectionByToEntityIDResult" nillable="true" type="q9:ArrayOfTransfer" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryDetailCollectionByToEntityID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EntityID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryDetailCollectionByToEntityIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Oleit.AS.Service.DataObject" minOccurs="0" name="QueryDetailCollectionByToEntityIDResult" nillable="true" type="q10:ArrayOfTransferDetail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryByEntityID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EntityID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryByEntityIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Oleit.AS.Service.DataObject" minOccurs="0" name="QueryByEntityIDResult" nillable="true" type="q11:ArrayOfTransferDetail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

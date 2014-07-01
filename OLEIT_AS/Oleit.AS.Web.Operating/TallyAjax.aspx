@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="TallyAjax.aspx.cs" Inherits="Accounting_System.TallyAjax" %>

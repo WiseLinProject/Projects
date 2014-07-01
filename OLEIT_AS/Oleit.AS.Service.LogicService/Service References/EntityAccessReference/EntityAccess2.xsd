@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Oleit.AS.Service.DataObject" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Oleit.AS.Service.DataObject" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:57693/EntityAccess.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="Entity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Currency" nillable="true" type="tns:Currency" />
+      <xs:element minOccurs="0" name="Enable" type="xs:int" />
+      <xs:element minOccurs="0" name="EntityID" type="xs:int" />
+      <xs:element minOccurs="0" name="EntityName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EntityType" type="tns:EntityType" />
+      <xs:element minOccurs="0" name="ExchangeRate" type="xs:decimal" />
+      <xs:element minOccurs="0" name="IsAccount" type="xs:int" />
+      <xs:element minOccurs="0" name="IsLastLevel" type="xs:int" />
+      <xs:element minOccurs="0" name="ParentID" type="xs:int" />
+      <xs:element minOccurs="0" name="SubEntities" nillable="true" type="tns:ArrayOfEntity" />
+      <xs:element minOccurs="0" name="SumType" type="tns:SumType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Entity" nillable="true" type="tns:Entity" />
+  <xs:complexType name="Currency">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CurrencyID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Currency" nillable="true" type="tns:Currency" />
+  <xs:simpleType name="EntityType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="PAndL">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Cash">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Expence">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="BadDebt">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="MLJ">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">5</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="EntityType" nillable="true" type="tns:EntityType" />
+  <xs:complexType name="ArrayOfEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Entity" nillable="true" type="tns:Entity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEntity" nillable="true" type="tns:ArrayOfEntity" />
+  <xs:simpleType name="SumType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Not" />
+      <xs:enumeration value="Transaction" />
+      <xs:enumeration value="Subtotal" />
+      <xs:enumeration value="Super" />
+      <xs:enumeration value="Master" />
+      <xs:enumeration value="Agent" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="SumType" nillable="true" type="tns:SumType" />
+  <xs:complexType name="CashEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ContractNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreditLimit" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EntityID" type="xs:int" />
+      <xs:element minOccurs="0" name="QQ" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RecommendedBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SettlementName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SettlementNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Skype" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TallyName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TallyNumber" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CashEntity" nillable="true" type="tns:CashEntity" />
+  <xs:complexType name="Account">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AccountName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AccountType" type="tns:AccountType" />
+      <xs:element minOccurs="0" name="BettingLimit" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Color" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Company" type="xs:int" />
+      <xs:element minOccurs="0" name="DateOpen" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EntityID" type="xs:int" />
+      <xs:element minOccurs="0" name="Factor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="IP" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IssuesConditions" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Odds" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Perbet" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Personnel" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RemarksAcc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" type="tns:Status" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Account" nillable="true" type="tns:Account" />
+  <xs:simpleType name="AccountType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="SuperSenior">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Senior">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Master">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Agent">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Members">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">5</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AccountType" nillable="true" type="tns:AccountType" />
+  <xs:simpleType name="Status">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Suspended">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Closed">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="NoFight">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="FollowBet">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="LousyOdds">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">5</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="NeedToOpenBack">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">6</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Others">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">7</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Status" nillable="true" type="tns:Status" />
+  <xs:complexType name="ArrayOfCashEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CashEntity" nillable="true" type="tns:CashEntity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCashEntity" nillable="true" type="tns:ArrayOfCashEntity" />
+  <xs:complexType name="ArrayOfAccount">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Account" nillable="true" type="tns:Account" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAccount" nillable="true" type="tns:ArrayOfAccount" />
+  <xs:complexType name="User">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Enable" type="xs:int" />
+      <xs:element minOccurs="0" name="UserID" type="xs:int" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserPWD" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="User" nillable="true" type="tns:User" />
+  <xs:complexType name="Relation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Description" type="tns:RelationDescription" />
+      <xs:element minOccurs="0" name="Entity" nillable="true" type="tns:Entity" />
+      <xs:element minOccurs="0" name="Numeric" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TargetEntity" nillable="true" type="tns:Entity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Relation" nillable="true" type="tns:Relation" />
+  <xs:simpleType name="RelationDescription">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Allocate">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Position">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Commission">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="FollowBet">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="PAndLSum">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">5</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="RelationDescription" nillable="true" type="tns:RelationDescription" />
+  <xs:complexType name="ArrayOfRelation">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Relation" nillable="true" type="tns:Relation" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRelation" nillable="true" type="tns:ArrayOfRelation" />
+</xs:schema>

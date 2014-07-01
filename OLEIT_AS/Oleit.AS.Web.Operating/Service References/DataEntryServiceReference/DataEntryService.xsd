@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:53695/DataEntryService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Oleit.AS.Service.DataObject" />
+  <xs:import schemaLocation="http://localhost:53695/DataEntryService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:element name="InsertRecord">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Oleit.AS.Service.DataObject" minOccurs="0" name="record" nillable="true" type="q1:Record" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Oleit.AS.Service.DataObject" minOccurs="0" name="jcollection" nillable="true" type="q2:ArrayOfJournal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertRecordResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertRecordResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveRecord">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Oleit.AS.Service.DataObject" minOccurs="0" name="record" nillable="true" type="q3:Record" />
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Oleit.AS.Service.DataObject" minOccurs="0" name="jcollection" nillable="true" type="q4:ArrayOfJournal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveRecordResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveRecordResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertTransfer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Oleit.AS.Service.DataObject" minOccurs="0" name="record" nillable="true" type="q5:Record" />
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Oleit.AS.Service.DataObject" minOccurs="0" name="transfer" nillable="true" type="q6:Transfer" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertTransferResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertTransferResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateRecord">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Oleit.AS.Service.DataObject" minOccurs="0" name="user" nillable="true" type="q7:User" />
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Oleit.AS.Service.DataObject" minOccurs="0" name="record" nillable="true" type="q8:Record" />
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Oleit.AS.Service.DataObject" minOccurs="0" name="jcollection" nillable="true" type="q9:ArrayOfJournal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateRecordResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadRecord">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="recordID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadRecordResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Oleit.AS.Service.DataObject" minOccurs="0" name="LoadRecordResult" nillable="true" type="q10:Record" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadRecordByPeriodEntityID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="entityid" type="xs:int" />
+        <xs:element minOccurs="0" name="periodid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadRecordByPeriodEntityIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Oleit.AS.Service.DataObject" minOccurs="0" name="LoadRecordByPeriodEntityIDResult" nillable="true" type="q11:ArrayOfRecord" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRecordList">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRecordListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Oleit.AS.Service.DataObject" minOccurs="0" name="GetRecordListResult" nillable="true" type="q12:ArrayOfRecord" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Approve">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="recordID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ApproveResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Avoid">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="recordID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AvoidResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadTransaction">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadTransactionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Oleit.AS.Service.DataObject" minOccurs="0" name="LoadTransactionResult" nillable="true" type="q13:ArrayOfTransaction" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadTransactionByID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadTransactionByIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Oleit.AS.Service.DataObject" minOccurs="0" name="LoadTransactionByIDResult" nillable="true" type="q14:ArrayOfTransaction" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadTransactionByPeriodID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_periodid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadTransactionByPeriodIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/Oleit.AS.Service.DataObject" minOccurs="0" name="LoadTransactionByPeriodIDResult" nillable="true" type="q15:ArrayOfTransaction" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertTransaction">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/Oleit.AS.Service.DataObject" minOccurs="0" name="_transaction" nillable="true" type="q16:Transaction" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertTransactionResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetNotices">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_id" type="xs:int" />
+        <xs:element minOccurs="0" name="_userid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetNoticesResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetConfirm">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/Oleit.AS.Service.DataObject" minOccurs="0" name="transaction" nillable="true" type="q17:Transaction" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetConfirmResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Updatetransaction">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/Oleit.AS.Service.DataObject" minOccurs="0" name="transaction" nillable="true" type="q18:Transaction" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdatetransactionResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetjournalSum">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="periodId" type="xs:int" />
+        <xs:element minOccurs="0" name="typeid" type="xs:int" />
+        <xs:element minOccurs="0" name="entityid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetjournalSumResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetjournalSumResult" nillable="true" type="q19:ArrayOfdecimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

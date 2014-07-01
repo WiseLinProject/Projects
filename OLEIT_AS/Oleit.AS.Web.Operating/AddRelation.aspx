@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AddRelation.aspx.cs" Inherits="Accounting_System.AddRelation" %>

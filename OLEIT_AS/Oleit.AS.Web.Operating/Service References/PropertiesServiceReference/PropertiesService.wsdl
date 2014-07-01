@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="PropertiesService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:53695/PropertiesService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:53695/PropertiesService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:53695/PropertiesService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Oleit.AS.Service.DataObject" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IPropertiesService_Insert_InputMessage">
+    <wsdl:part name="parameters" element="tns:Insert" />
+  </wsdl:message>
+  <wsdl:message name="IPropertiesService_Insert_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPropertiesService_InsertCollection_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertCollection" />
+  </wsdl:message>
+  <wsdl:message name="IPropertiesService_InsertCollection_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertCollectionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPropertiesService_SetPropertyValue1_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetPropertyValue1" />
+  </wsdl:message>
+  <wsdl:message name="IPropertiesService_SetPropertyValue1_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetPropertyValue1Response" />
+  </wsdl:message>
+  <wsdl:message name="IPropertiesService_SetProperty_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetProperty" />
+  </wsdl:message>
+  <wsdl:message name="IPropertiesService_SetProperty_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetPropertyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPropertiesService_SetPropertyValue2_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetPropertyValue2" />
+  </wsdl:message>
+  <wsdl:message name="IPropertiesService_SetPropertyValue2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetPropertyValue2Response" />
+  </wsdl:message>
+  <wsdl:message name="IPropertiesService_GetPropertyValue1_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPropertyValue1" />
+  </wsdl:message>
+  <wsdl:message name="IPropertiesService_GetPropertyValue1_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPropertyValue1Response" />
+  </wsdl:message>
+  <wsdl:message name="IPropertiesService_GetPropertyValue2_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPropertyValue2" />
+  </wsdl:message>
+  <wsdl:message name="IPropertiesService_GetPropertyValue2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPropertyValue2Response" />
+  </wsdl:message>
+  <wsdl:message name="IPropertiesService_GetProperty_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProperty" />
+  </wsdl:message>
+  <wsdl:message name="IPropertiesService_GetProperty_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPropertyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPropertiesService_GetAllProperties_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllProperties" />
+  </wsdl:message>
+  <wsdl:message name="IPropertiesService_GetAllProperties_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllPropertiesResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IPropertiesService">
+    <wsdl:operation name="Insert">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPropertiesService/Insert" message="tns:IPropertiesService_Insert_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPropertiesService/InsertResponse" message="tns:IPropertiesService_Insert_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertCollection">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPropertiesService/InsertCollection" message="tns:IPropertiesService_InsertCollection_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPropertiesService/InsertCollectionResponse" message="tns:IPropertiesService_InsertCollection_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetPropertyValue1">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPropertiesService/SetPropertyValue1" message="tns:IPropertiesService_SetPropertyValue1_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPropertiesService/SetPropertyValue1Response" message="tns:IPropertiesService_SetPropertyValue1_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetProperty">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPropertiesService/SetProperty" message="tns:IPropertiesService_SetProperty_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPropertiesService/SetPropertyResponse" message="tns:IPropertiesService_SetProperty_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetPropertyValue2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPropertiesService/SetPropertyValue2" message="tns:IPropertiesService_SetPropertyValue2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPropertiesService/SetPropertyValue2Response" message="tns:IPropertiesService_SetPropertyValue2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPropertyValue1">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPropertiesService/GetPropertyValue1" message="tns:IPropertiesService_GetPropertyValue1_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPropertiesService/GetPropertyValue1Response" message="tns:IPropertiesService_GetPropertyValue1_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPropertyValue2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPropertiesService/GetPropertyValue2" message="tns:IPropertiesService_GetPropertyValue2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPropertiesService/GetPropertyValue2Response" message="tns:IPropertiesService_GetPropertyValue2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProperty">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPropertiesService/GetProperty" message="tns:IPropertiesService_GetProperty_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPropertiesService/GetPropertyResponse" message="tns:IPropertiesService_GetProperty_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllProperties">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPropertiesService/GetAllProperties" message="tns:IPropertiesService_GetAllProperties_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPropertiesService/GetAllPropertiesResponse" message="tns:IPropertiesService_GetAllProperties_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IPropertiesService" type="tns:IPropertiesService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Insert">
+      <soap:operation soapAction="http://tempuri.org/IPropertiesService/Insert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertCollection">
+      <soap:operation soapAction="http://tempuri.org/IPropertiesService/InsertCollection" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetPropertyValue1">
+      <soap:operation soapAction="http://tempuri.org/IPropertiesService/SetPropertyValue1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetProperty">
+      <soap:operation soapAction="http://tempuri.org/IPropertiesService/SetProperty" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetPropertyValue2">
+      <soap:operation soapAction="http://tempuri.org/IPropertiesService/SetPropertyValue2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPropertyValue1">
+      <soap:operation soapAction="http://tempuri.org/IPropertiesService/GetPropertyValue1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPropertyValue2">
+      <soap:operation soapAction="http://tempuri.org/IPropertiesService/GetPropertyValue2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProperty">
+      <soap:operation soapAction="http://tempuri.org/IPropertiesService/GetProperty" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllProperties">
+      <soap:operation soapAction="http://tempuri.org/IPropertiesService/GetAllProperties" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PropertiesService">
+    <wsdl:port name="BasicHttpBinding_IPropertiesService" binding="tns:BasicHttpBinding_IPropertiesService">
+      <soap:address location="http://localhost:53695/PropertiesService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

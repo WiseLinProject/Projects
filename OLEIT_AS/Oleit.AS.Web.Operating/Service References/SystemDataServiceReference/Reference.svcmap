@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="a3c60536-16a3-4a82-9b74-ae71f8faf4e7" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies>
+      <ReferencedAssembly AssemblyName="Oleit.AS.Service.DataObject" />
+      <ReferencedAssembly AssemblyName="Oleit.AS.Service.LogicService" />
+    </ReferencedAssemblies>
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:53695/SystemDataService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SystemDataService.disco" MetadataType="Disco" ID="42b1137f-e0e4-4adf-8b97-1269433fe942" SourceId="1" SourceUrl="http://localhost:53695/SystemDataService.svc?disco" />
+    <MetadataFile FileName="SystemDataService1.xsd" MetadataType="Schema" ID="4fd0bf73-dc0c-4626-aa36-c6c6480dc877" SourceId="1" SourceUrl="http://localhost:53695/SystemDataService.svc?xsd=xsd0" />
+    <MetadataFile FileName="SystemDataService.xsd" MetadataType="Schema" ID="9fcd97c3-1c85-4482-9662-4fd6c1a1334e" SourceId="1" SourceUrl="http://localhost:53695/SystemDataService.svc?xsd=xsd1" />
+    <MetadataFile FileName="SystemDataService.wsdl" MetadataType="Wsdl" ID="f2069698-decb-43fb-b070-ec9abe7b5d11" SourceId="1" SourceUrl="http://localhost:53695/SystemDataService.svc?wsdl" />
+    <MetadataFile FileName="SystemDataService2.xsd" MetadataType="Schema" ID="481943f2-0dfc-42b1-a020-8412926759ed" SourceId="1" SourceUrl="http://localhost:53695/SystemDataService.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

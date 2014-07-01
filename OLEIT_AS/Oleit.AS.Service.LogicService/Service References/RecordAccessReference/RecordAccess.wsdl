@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="RecordAccess" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:57693/RecordAccess.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:57693/RecordAccess.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:57693/RecordAccess.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Oleit.AS.Service.DataObject" />
+      <xsd:import schemaLocation="http://localhost:57693/RecordAccess.svc?xsd=xsd3" />
+      <xsd:import schemaLocation="http://localhost:57693/RecordAccess.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IRecordAccess_Insert_InputMessage">
+    <wsdl:part name="parameters" element="tns:Insert" />
+  </wsdl:message>
+  <wsdl:message name="IRecordAccess_Insert_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRecordAccess_InsertRecordCollection_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertRecordCollection" />
+  </wsdl:message>
+  <wsdl:message name="IRecordAccess_InsertRecordCollection_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertRecordCollectionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRecordAccess_QueryAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryAll" />
+  </wsdl:message>
+  <wsdl:message name="IRecordAccess_QueryAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRecordAccess_QueryByrecordID_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryByrecordID" />
+  </wsdl:message>
+  <wsdl:message name="IRecordAccess_QueryByrecordID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryByrecordIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRecordAccess_QueryBytype_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryBytype" />
+  </wsdl:message>
+  <wsdl:message name="IRecordAccess_QueryBytype_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryBytypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRecordAccess_QueryByperiod_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryByperiod" />
+  </wsdl:message>
+  <wsdl:message name="IRecordAccess_QueryByperiod_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryByperiodResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRecordAccess_QueryByRecordStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryByRecordStatus" />
+  </wsdl:message>
+  <wsdl:message name="IRecordAccess_QueryByRecordStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryByRecordStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRecordAccess_QueryByapproveUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryByapproveUser" />
+  </wsdl:message>
+  <wsdl:message name="IRecordAccess_QueryByapproveUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryByapproveUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRecordAccess_QueryJournal_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryJournal" />
+  </wsdl:message>
+  <wsdl:message name="IRecordAccess_QueryJournal_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryJournalResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRecordAccess_QueryJournal2_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryJournal2" />
+  </wsdl:message>
+  <wsdl:message name="IRecordAccess_QueryJournal2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryJournal2Response" />
+  </wsdl:message>
+  <wsdl:message name="IRecordAccess_QueryRecordByPeriodEntityID_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryRecordByPeriodEntityID" />
+  </wsdl:message>
+  <wsdl:message name="IRecordAccess_QueryRecordByPeriodEntityID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryRecordByPeriodEntityIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRecordAccess_Update_InputMessage">
+    <wsdl:part name="parameters" element="tns:Update" />
+  </wsdl:message>
+  <wsdl:message name="IRecordAccess_Update_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRecordAccess_LoadWinAndLossLog_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadWinAndLossLog" />
+  </wsdl:message>
+  <wsdl:message name="IRecordAccess_LoadWinAndLossLog_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadWinAndLossLogResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRecordAccess_InsertDeletionLog_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertDeletionLog" />
+  </wsdl:message>
+  <wsdl:message name="IRecordAccess_InsertDeletionLog_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertDeletionLogResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRecordAccess_UpdateJournal_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateJournal" />
+  </wsdl:message>
+  <wsdl:message name="IRecordAccess_UpdateJournal_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateJournalResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRecordAccess_UpdateJournalCollection_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateJournalCollection" />
+  </wsdl:message>
+  <wsdl:message name="IRecordAccess_UpdateJournalCollection_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateJournalCollectionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRecordAccess_ChangeStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeStatus" />
+  </wsdl:message>
+  <wsdl:message name="IRecordAccess_ChangeStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRecordAccess_QueryRecordID_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryRecordID" />
+  </wsdl:message>
+  <wsdl:message name="IRecordAccess_QueryRecordID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryRecordIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRecordAccess_GetjournalSum_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetjournalSum" />
+  </wsdl:message>
+  <wsdl:message name="IRecordAccess_GetjournalSum_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetjournalSumResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IRecordAccess">
+    <wsdl:operation name="Insert">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRecordAccess/Insert" message="tns:IRecordAccess_Insert_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRecordAccess/InsertResponse" message="tns:IRecordAccess_Insert_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertRecordCollection">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRecordAccess/InsertRecordCollection" message="tns:IRecordAccess_InsertRecordCollection_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRecordAccess/InsertRecordCollectionResponse" message="tns:IRecordAccess_InsertRecordCollection_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRecordAccess/QueryAll" message="tns:IRecordAccess_QueryAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRecordAccess/QueryAllResponse" message="tns:IRecordAccess_QueryAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryByrecordID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRecordAccess/QueryByrecordID" message="tns:IRecordAccess_QueryByrecordID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRecordAccess/QueryByrecordIDResponse" message="tns:IRecordAccess_QueryByrecordID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryBytype">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRecordAccess/QueryBytype" message="tns:IRecordAccess_QueryBytype_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRecordAccess/QueryBytypeResponse" message="tns:IRecordAccess_QueryBytype_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryByperiod">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRecordAccess/QueryByperiod" message="tns:IRecordAccess_QueryByperiod_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRecordAccess/QueryByperiodResponse" message="tns:IRecordAccess_QueryByperiod_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryByRecordStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRecordAccess/QueryByRecordStatus" message="tns:IRecordAccess_QueryByRecordStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRecordAccess/QueryByRecordStatusResponse" message="tns:IRecordAccess_QueryByRecordStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryByapproveUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRecordAccess/QueryByapproveUser" message="tns:IRecordAccess_QueryByapproveUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRecordAccess/QueryByapproveUserResponse" message="tns:IRecordAccess_QueryByapproveUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryJournal">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRecordAccess/QueryJournal" message="tns:IRecordAccess_QueryJournal_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRecordAccess/QueryJournalResponse" message="tns:IRecordAccess_QueryJournal_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryJournal2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRecordAccess/QueryJournal2" message="tns:IRecordAccess_QueryJournal2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRecordAccess/QueryJournal2Response" message="tns:IRecordAccess_QueryJournal2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryRecordByPeriodEntityID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRecordAccess/QueryRecordByPeriodEntityID" message="tns:IRecordAccess_QueryRecordByPeriodEntityID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRecordAccess/QueryRecordByPeriodEntityIDResponse" message="tns:IRecordAccess_QueryRecordByPeriodEntityID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Update">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRecordAccess/Update" message="tns:IRecordAccess_Update_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRecordAccess/UpdateResponse" message="tns:IRecordAccess_Update_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadWinAndLossLog">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRecordAccess/LoadWinAndLossLog" message="tns:IRecordAccess_LoadWinAndLossLog_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRecordAccess/LoadWinAndLossLogResponse" message="tns:IRecordAccess_LoadWinAndLossLog_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertDeletionLog">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRecordAccess/InsertDeletionLog" message="tns:IRecordAccess_InsertDeletionLog_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRecordAccess/InsertDeletionLogResponse" message="tns:IRecordAccess_InsertDeletionLog_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateJournal">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRecordAccess/UpdateJournal" message="tns:IRecordAccess_UpdateJournal_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRecordAccess/UpdateJournalResponse" message="tns:IRecordAccess_UpdateJournal_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateJournalCollection">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRecordAccess/UpdateJournalCollection" message="tns:IRecordAccess_UpdateJournalCollection_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRecordAccess/UpdateJournalCollectionResponse" message="tns:IRecordAccess_UpdateJournalCollection_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRecordAccess/ChangeStatus" message="tns:IRecordAccess_ChangeStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRecordAccess/ChangeStatusResponse" message="tns:IRecordAccess_ChangeStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryRecordID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRecordAccess/QueryRecordID" message="tns:IRecordAccess_QueryRecordID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRecordAccess/QueryRecordIDResponse" message="tns:IRecordAccess_QueryRecordID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetjournalSum">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRecordAccess/GetjournalSum" message="tns:IRecordAccess_GetjournalSum_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRecordAccess/GetjournalSumResponse" message="tns:IRecordAccess_GetjournalSum_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IRecordAccess" type="tns:IRecordAccess">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Insert">
+      <soap:operation soapAction="http://tempuri.org/IRecordAccess/Insert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertRecordCollection">
+      <soap:operation soapAction="http://tempuri.org/IRecordAccess/InsertRecordCollection" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryAll">
+      <soap:operation soapAction="http://tempuri.org/IRecordAccess/QueryAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryByrecordID">
+      <soap:operation soapAction="http://tempuri.org/IRecordAccess/QueryByrecordID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryBytype">
+      <soap:operation soapAction="http://tempuri.org/IRecordAccess/QueryBytype" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryByperiod">
+      <soap:operation soapAction="http://tempuri.org/IRecordAccess/QueryByperiod" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryByRecordStatus">
+      <soap:operation soapAction="http://tempuri.org/IRecordAccess/QueryByRecordStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryByapproveUser">
+      <soap:operation soapAction="http://tempuri.org/IRecordAccess/QueryByapproveUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryJournal">
+      <soap:operation soapAction="http://tempuri.org/IRecordAccess/QueryJournal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryJournal2">
+      <soap:operation soapAction="http://tempuri.org/IRecordAccess/QueryJournal2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryRecordByPeriodEntityID">
+      <soap:operation soapAction="http://tempuri.org/IRecordAccess/QueryRecordByPeriodEntityID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Update">
+      <soap:operation soapAction="http://tempuri.org/IRecordAccess/Update" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadWinAndLossLog">
+      <soap:operation soapAction="http://tempuri.org/IRecordAccess/LoadWinAndLossLog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertDeletionLog">
+      <soap:operation soapAction="http://tempuri.org/IRecordAccess/InsertDeletionLog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateJournal">
+      <soap:operation soapAction="http://tempuri.org/IRecordAccess/UpdateJournal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateJournalCollection">
+      <soap:operation soapAction="http://tempuri.org/IRecordAccess/UpdateJournalCollection" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeStatus">
+      <soap:operation soapAction="http://tempuri.org/IRecordAccess/ChangeStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryRecordID">
+      <soap:operation soapAction="http://tempuri.org/IRecordAccess/QueryRecordID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetjournalSum">
+      <soap:operation soapAction="http://tempuri.org/IRecordAccess/GetjournalSum" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="RecordAccess">
+    <wsdl:port name="BasicHttpBinding_IRecordAccess" binding="tns:BasicHttpBinding_IRecordAccess">
+      <soap:address location="http://localhost:57693/RecordAccess.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

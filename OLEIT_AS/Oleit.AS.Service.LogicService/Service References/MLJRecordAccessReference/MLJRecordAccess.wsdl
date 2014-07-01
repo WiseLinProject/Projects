@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="MLJRecordAccess" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:57693/MLJRecordAccess.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:57693/MLJRecordAccess.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:57693/MLJRecordAccess.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Oleit.AS.Service.DataObject" />
+      <xsd:import schemaLocation="http://localhost:57693/MLJRecordAccess.svc?xsd=xsd3" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IMLJRecordAccess_Insert_InputMessage">
+    <wsdl:part name="parameters" element="tns:Insert" />
+  </wsdl:message>
+  <wsdl:message name="IMLJRecordAccess_Insert_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMLJRecordAccess_QueryByRecordID_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryByRecordID" />
+  </wsdl:message>
+  <wsdl:message name="IMLJRecordAccess_QueryByRecordID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryByRecordIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMLJRecordAccess_QueryByPeriodIDEntityName_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryByPeriodIDEntityName" />
+  </wsdl:message>
+  <wsdl:message name="IMLJRecordAccess_QueryByPeriodIDEntityName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryByPeriodIDEntityNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMLJRecordAccess_QueryJournalByRecordID_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryJournalByRecordID" />
+  </wsdl:message>
+  <wsdl:message name="IMLJRecordAccess_QueryJournalByRecordID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryJournalByRecordIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMLJRecordAccess_UpdateRecord_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRecord" />
+  </wsdl:message>
+  <wsdl:message name="IMLJRecordAccess_UpdateRecord_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRecordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMLJRecordAccess_UpdateJournal_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateJournal" />
+  </wsdl:message>
+  <wsdl:message name="IMLJRecordAccess_UpdateJournal_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateJournalResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMLJRecordAccess_UpdateJournalCollection_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateJournalCollection" />
+  </wsdl:message>
+  <wsdl:message name="IMLJRecordAccess_UpdateJournalCollection_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateJournalCollectionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMLJRecordAccess_ChangeStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeStatus" />
+  </wsdl:message>
+  <wsdl:message name="IMLJRecordAccess_ChangeStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMLJRecordAccess_CheckAndAdd_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckAndAdd" />
+  </wsdl:message>
+  <wsdl:message name="IMLJRecordAccess_CheckAndAdd_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckAndAddResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMLJRecordAccess_QueryStatusColor_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryStatusColor" />
+  </wsdl:message>
+  <wsdl:message name="IMLJRecordAccess_QueryStatusColor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryStatusColorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMLJRecordAccess_UpdateColor_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateColor" />
+  </wsdl:message>
+  <wsdl:message name="IMLJRecordAccess_UpdateColor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateColorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMLJRecordAccess_QueryOneStatusColor_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryOneStatusColor" />
+  </wsdl:message>
+  <wsdl:message name="IMLJRecordAccess_QueryOneStatusColor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryOneStatusColorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMLJRecordAccess_InsertUserRMLJ_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertUserRMLJ" />
+  </wsdl:message>
+  <wsdl:message name="IMLJRecordAccess_InsertUserRMLJ_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertUserRMLJResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMLJRecordAccess_GetUserMLJEntity_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserMLJEntity" />
+  </wsdl:message>
+  <wsdl:message name="IMLJRecordAccess_GetUserMLJEntity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserMLJEntityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMLJRecordAccess_UpdateUserMLJ_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUserMLJ" />
+  </wsdl:message>
+  <wsdl:message name="IMLJRecordAccess_UpdateUserMLJ_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUserMLJResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMLJRecordAccess_IsApprove_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsApprove" />
+  </wsdl:message>
+  <wsdl:message name="IMLJRecordAccess_IsApprove_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsApproveResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMLJRecordAccess_GetAccountStatusLog_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAccountStatusLog" />
+  </wsdl:message>
+  <wsdl:message name="IMLJRecordAccess_GetAccountStatusLog_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAccountStatusLogResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMLJRecordAccess_GetMLJLog_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMLJLog" />
+  </wsdl:message>
+  <wsdl:message name="IMLJRecordAccess_GetMLJLog_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMLJLogResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMLJRecordAccess_GetMLJSum_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMLJSum" />
+  </wsdl:message>
+  <wsdl:message name="IMLJRecordAccess_GetMLJSum_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMLJSumResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IMLJRecordAccess">
+    <wsdl:operation name="Insert">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMLJRecordAccess/Insert" message="tns:IMLJRecordAccess_Insert_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMLJRecordAccess/InsertResponse" message="tns:IMLJRecordAccess_Insert_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryByRecordID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMLJRecordAccess/QueryByRecordID" message="tns:IMLJRecordAccess_QueryByRecordID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMLJRecordAccess/QueryByRecordIDResponse" message="tns:IMLJRecordAccess_QueryByRecordID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryByPeriodIDEntityName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMLJRecordAccess/QueryByPeriodIDEntityName" message="tns:IMLJRecordAccess_QueryByPeriodIDEntityName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMLJRecordAccess/QueryByPeriodIDEntityNameResponse" message="tns:IMLJRecordAccess_QueryByPeriodIDEntityName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryJournalByRecordID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMLJRecordAccess/QueryJournalByRecordID" message="tns:IMLJRecordAccess_QueryJournalByRecordID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMLJRecordAccess/QueryJournalByRecordIDResponse" message="tns:IMLJRecordAccess_QueryJournalByRecordID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRecord">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMLJRecordAccess/UpdateRecord" message="tns:IMLJRecordAccess_UpdateRecord_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMLJRecordAccess/UpdateRecordResponse" message="tns:IMLJRecordAccess_UpdateRecord_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateJournal">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMLJRecordAccess/UpdateJournal" message="tns:IMLJRecordAccess_UpdateJournal_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMLJRecordAccess/UpdateJournalResponse" message="tns:IMLJRecordAccess_UpdateJournal_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateJournalCollection">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMLJRecordAccess/UpdateJournalCollection" message="tns:IMLJRecordAccess_UpdateJournalCollection_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMLJRecordAccess/UpdateJournalCollectionResponse" message="tns:IMLJRecordAccess_UpdateJournalCollection_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMLJRecordAccess/ChangeStatus" message="tns:IMLJRecordAccess_ChangeStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMLJRecordAccess/ChangeStatusResponse" message="tns:IMLJRecordAccess_ChangeStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckAndAdd">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMLJRecordAccess/CheckAndAdd" message="tns:IMLJRecordAccess_CheckAndAdd_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMLJRecordAccess/CheckAndAddResponse" message="tns:IMLJRecordAccess_CheckAndAdd_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryStatusColor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMLJRecordAccess/QueryStatusColor" message="tns:IMLJRecordAccess_QueryStatusColor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMLJRecordAccess/QueryStatusColorResponse" message="tns:IMLJRecordAccess_QueryStatusColor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateColor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMLJRecordAccess/UpdateColor" message="tns:IMLJRecordAccess_UpdateColor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMLJRecordAccess/UpdateColorResponse" message="tns:IMLJRecordAccess_UpdateColor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryOneStatusColor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMLJRecordAccess/QueryOneStatusColor" message="tns:IMLJRecordAccess_QueryOneStatusColor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMLJRecordAccess/QueryOneStatusColorResponse" message="tns:IMLJRecordAccess_QueryOneStatusColor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertUserRMLJ">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMLJRecordAccess/InsertUserRMLJ" message="tns:IMLJRecordAccess_InsertUserRMLJ_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMLJRecordAccess/InsertUserRMLJResponse" message="tns:IMLJRecordAccess_InsertUserRMLJ_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserMLJEntity">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMLJRecordAccess/GetUserMLJEntity" message="tns:IMLJRecordAccess_GetUserMLJEntity_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMLJRecordAccess/GetUserMLJEntityResponse" message="tns:IMLJRecordAccess_GetUserMLJEntity_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserMLJ">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMLJRecordAccess/UpdateUserMLJ" message="tns:IMLJRecordAccess_UpdateUserMLJ_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMLJRecordAccess/UpdateUserMLJResponse" message="tns:IMLJRecordAccess_UpdateUserMLJ_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsApprove">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMLJRecordAccess/IsApprove" message="tns:IMLJRecordAccess_IsApprove_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMLJRecordAccess/IsApproveResponse" message="tns:IMLJRecordAccess_IsApprove_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountStatusLog">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMLJRecordAccess/GetAccountStatusLog" message="tns:IMLJRecordAccess_GetAccountStatusLog_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMLJRecordAccess/GetAccountStatusLogResponse" message="tns:IMLJRecordAccess_GetAccountStatusLog_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMLJLog">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMLJRecordAccess/GetMLJLog" message="tns:IMLJRecordAccess_GetMLJLog_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMLJRecordAccess/GetMLJLogResponse" message="tns:IMLJRecordAccess_GetMLJLog_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMLJSum">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMLJRecordAccess/GetMLJSum" message="tns:IMLJRecordAccess_GetMLJSum_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMLJRecordAccess/GetMLJSumResponse" message="tns:IMLJRecordAccess_GetMLJSum_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IMLJRecordAccess" type="tns:IMLJRecordAccess">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Insert">
+      <soap:operation soapAction="http://tempuri.org/IMLJRecordAccess/Insert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryByRecordID">
+      <soap:operation soapAction="http://tempuri.org/IMLJRecordAccess/QueryByRecordID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryByPeriodIDEntityName">
+      <soap:operation soapAction="http://tempuri.org/IMLJRecordAccess/QueryByPeriodIDEntityName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryJournalByRecordID">
+      <soap:operation soapAction="http://tempuri.org/IMLJRecordAccess/QueryJournalByRecordID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRecord">
+      <soap:operation soapAction="http://tempuri.org/IMLJRecordAccess/UpdateRecord" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateJournal">
+      <soap:operation soapAction="http://tempuri.org/IMLJRecordAccess/UpdateJournal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateJournalCollection">
+      <soap:operation soapAction="http://tempuri.org/IMLJRecordAccess/UpdateJournalCollection" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeStatus">
+      <soap:operation soapAction="http://tempuri.org/IMLJRecordAccess/ChangeStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckAndAdd">
+      <soap:operation soapAction="http://tempuri.org/IMLJRecordAccess/CheckAndAdd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryStatusColor">
+      <soap:operation soapAction="http://tempuri.org/IMLJRecordAccess/QueryStatusColor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateColor">
+      <soap:operation soapAction="http://tempuri.org/IMLJRecordAccess/UpdateColor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryOneStatusColor">
+      <soap:operation soapAction="http://tempuri.org/IMLJRecordAccess/QueryOneStatusColor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertUserRMLJ">
+      <soap:operation soapAction="http://tempuri.org/IMLJRecordAccess/InsertUserRMLJ" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserMLJEntity">
+      <soap:operation soapAction="http://tempuri.org/IMLJRecordAccess/GetUserMLJEntity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserMLJ">
+      <soap:operation soapAction="http://tempuri.org/IMLJRecordAccess/UpdateUserMLJ" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsApprove">
+      <soap:operation soapAction="http://tempuri.org/IMLJRecordAccess/IsApprove" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountStatusLog">
+      <soap:operation soapAction="http://tempuri.org/IMLJRecordAccess/GetAccountStatusLog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMLJLog">
+      <soap:operation soapAction="http://tempuri.org/IMLJRecordAccess/GetMLJLog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMLJSum">
+      <soap:operation soapAction="http://tempuri.org/IMLJRecordAccess/GetMLJSum" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MLJRecordAccess">
+    <wsdl:port name="BasicHttpBinding_IMLJRecordAccess" binding="tns:BasicHttpBinding_IMLJRecordAccess">
+      <soap:address location="http://localhost:57693/MLJRecordAccess.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

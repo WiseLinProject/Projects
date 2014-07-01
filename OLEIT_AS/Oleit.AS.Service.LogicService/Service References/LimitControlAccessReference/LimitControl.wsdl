@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="LimitControl" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://192.168.8.37:8000/LimitControl.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://192.168.8.37:8000/LimitControl.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://192.168.8.37:8000/LimitControl.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Oleit.AS.Service.DataObject" />
+      <xsd:import schemaLocation="http://192.168.8.37:8000/LimitControl.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ILimitControl_GetEntities_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEntities" />
+  </wsdl:message>
+  <wsdl:message name="ILimitControl_GetEntities_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEntitiesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILimitControl_GetAccounts_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAccounts" />
+  </wsdl:message>
+  <wsdl:message name="ILimitControl_GetAccounts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAccountsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILimitControl_GetMenu_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMenu" />
+  </wsdl:message>
+  <wsdl:message name="ILimitControl_GetMenu_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMenuResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILimitControl_GetMenuByUserID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMenuByUserID" />
+  </wsdl:message>
+  <wsdl:message name="ILimitControl_GetMenuByUserID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMenuByUserIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILimitControl_getUserFunctions_InputMessage">
+    <wsdl:part name="parameters" element="tns:getUserFunctions" />
+  </wsdl:message>
+  <wsdl:message name="ILimitControl_getUserFunctions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getUserFunctionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILimitControl_getUserFunctionByMenuID_InputMessage">
+    <wsdl:part name="parameters" element="tns:getUserFunctionByMenuID" />
+  </wsdl:message>
+  <wsdl:message name="ILimitControl_getUserFunctionByMenuID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getUserFunctionByMenuIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILimitControl_insertUserFunction_InputMessage">
+    <wsdl:part name="parameters" element="tns:insertUserFunction" />
+  </wsdl:message>
+  <wsdl:message name="ILimitControl_insertUserFunction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:insertUserFunctionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILimitControl_insertMenuToRole_InputMessage">
+    <wsdl:part name="parameters" element="tns:insertMenuToRole" />
+  </wsdl:message>
+  <wsdl:message name="ILimitControl_insertMenuToRole_OutputMessage">
+    <wsdl:part name="parameters" element="tns:insertMenuToRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILimitControl_insertRoleToUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:insertRoleToUser" />
+  </wsdl:message>
+  <wsdl:message name="ILimitControl_insertRoleToUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:insertRoleToUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILimitControl_deleteUserFunction_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteUserFunction" />
+  </wsdl:message>
+  <wsdl:message name="ILimitControl_deleteUserFunction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteUserFunctionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILimitControl_getUserRole_InputMessage">
+    <wsdl:part name="parameters" element="tns:getUserRole" />
+  </wsdl:message>
+  <wsdl:message name="ILimitControl_getUserRole_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getUserRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILimitControl_isFunctionAuthorized_InputMessage">
+    <wsdl:part name="parameters" element="tns:isFunctionAuthorized" />
+  </wsdl:message>
+  <wsdl:message name="ILimitControl_isFunctionAuthorized_OutputMessage">
+    <wsdl:part name="parameters" element="tns:isFunctionAuthorizedResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILimitControl_CheckLimit_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckLimit" />
+  </wsdl:message>
+  <wsdl:message name="ILimitControl_CheckLimit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckLimitResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ILimitControl">
+    <wsdl:operation name="GetEntities">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILimitControl/GetEntities" message="tns:ILimitControl_GetEntities_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILimitControl/GetEntitiesResponse" message="tns:ILimitControl_GetEntities_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAccounts">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILimitControl/GetAccounts" message="tns:ILimitControl_GetAccounts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILimitControl/GetAccountsResponse" message="tns:ILimitControl_GetAccounts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMenu">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILimitControl/GetMenu" message="tns:ILimitControl_GetMenu_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILimitControl/GetMenuResponse" message="tns:ILimitControl_GetMenu_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMenuByUserID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILimitControl/GetMenuByUserID" message="tns:ILimitControl_GetMenuByUserID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILimitControl/GetMenuByUserIDResponse" message="tns:ILimitControl_GetMenuByUserID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getUserFunctions">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILimitControl/getUserFunctions" message="tns:ILimitControl_getUserFunctions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILimitControl/getUserFunctionsResponse" message="tns:ILimitControl_getUserFunctions_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getUserFunctionByMenuID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILimitControl/getUserFunctionByMenuID" message="tns:ILimitControl_getUserFunctionByMenuID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILimitControl/getUserFunctionByMenuIDResponse" message="tns:ILimitControl_getUserFunctionByMenuID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="insertUserFunction">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILimitControl/insertUserFunction" message="tns:ILimitControl_insertUserFunction_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILimitControl/insertUserFunctionResponse" message="tns:ILimitControl_insertUserFunction_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="insertMenuToRole">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILimitControl/insertMenuToRole" message="tns:ILimitControl_insertMenuToRole_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILimitControl/insertMenuToRoleResponse" message="tns:ILimitControl_insertMenuToRole_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="insertRoleToUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILimitControl/insertRoleToUser" message="tns:ILimitControl_insertRoleToUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILimitControl/insertRoleToUserResponse" message="tns:ILimitControl_insertRoleToUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteUserFunction">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILimitControl/deleteUserFunction" message="tns:ILimitControl_deleteUserFunction_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILimitControl/deleteUserFunctionResponse" message="tns:ILimitControl_deleteUserFunction_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getUserRole">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILimitControl/getUserRole" message="tns:ILimitControl_getUserRole_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILimitControl/getUserRoleResponse" message="tns:ILimitControl_getUserRole_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="isFunctionAuthorized">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILimitControl/isFunctionAuthorized" message="tns:ILimitControl_isFunctionAuthorized_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILimitControl/isFunctionAuthorizedResponse" message="tns:ILimitControl_isFunctionAuthorized_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckLimit">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILimitControl/CheckLimit" message="tns:ILimitControl_CheckLimit_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILimitControl/CheckLimitResponse" message="tns:ILimitControl_CheckLimit_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ILimitControl" type="tns:ILimitControl">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetEntities">
+      <soap:operation soapAction="http://tempuri.org/ILimitControl/GetEntities" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccounts">
+      <soap:operation soapAction="http://tempuri.org/ILimitControl/GetAccounts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMenu">
+      <soap:operation soapAction="http://tempuri.org/ILimitControl/GetMenu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMenuByUserID">
+      <soap:operation soapAction="http://tempuri.org/ILimitControl/GetMenuByUserID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUserFunctions">
+      <soap:operation soapAction="http://tempuri.org/ILimitControl/getUserFunctions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUserFunctionByMenuID">
+      <soap:operation soapAction="http://tempuri.org/ILimitControl/getUserFunctionByMenuID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertUserFunction">
+      <soap:operation soapAction="http://tempuri.org/ILimitControl/insertUserFunction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertMenuToRole">
+      <soap:operation soapAction="http://tempuri.org/ILimitControl/insertMenuToRole" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertRoleToUser">
+      <soap:operation soapAction="http://tempuri.org/ILimitControl/insertRoleToUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteUserFunction">
+      <soap:operation soapAction="http://tempuri.org/ILimitControl/deleteUserFunction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUserRole">
+      <soap:operation soapAction="http://tempuri.org/ILimitControl/getUserRole" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="isFunctionAuthorized">
+      <soap:operation soapAction="http://tempuri.org/ILimitControl/isFunctionAuthorized" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckLimit">
+      <soap:operation soapAction="http://tempuri.org/ILimitControl/CheckLimit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="LimitControl">
+    <wsdl:port name="BasicHttpBinding_ILimitControl" binding="tns:BasicHttpBinding_ILimitControl">
+      <soap:address location="http://192.168.8.37:8000/LimitControl.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

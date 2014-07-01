@@ -1,0 +1,9 @@
+D:\Development\OLEIT_AS\Oleit.AS.Service.DataService\bin\Oleit.AS.Service.DataService.dll
+D:\Development\OLEIT_AS\Oleit.AS.Service.DataService\bin\Oleit.AS.Service.DataService.pdb
+D:\Development\OLEIT_AS\Oleit.AS.Service.DataService\bin\Oleit.AS.Service.DataObject.dll
+D:\Development\OLEIT_AS\Oleit.AS.Service.DataService\bin\Newtonsoft.Json.dll
+D:\Development\OLEIT_AS\Oleit.AS.Service.DataService\bin\Oleit.AS.Service.DataObject.pdb
+D:\Development\OLEIT_AS\Oleit.AS.Service.DataService\bin\Newtonsoft.Json.xml
+D:\Development\OLEIT_AS\Oleit.AS.Service.DataService\obj\Debug\Oleit.AS.Service.DataService.csprojResolveAssemblyReference.cache
+D:\Development\OLEIT_AS\Oleit.AS.Service.DataService\obj\Debug\Oleit.AS.Service.DataService.dll
+D:\Development\OLEIT_AS\Oleit.AS.Service.DataService\obj\Debug\Oleit.AS.Service.DataService.pdb

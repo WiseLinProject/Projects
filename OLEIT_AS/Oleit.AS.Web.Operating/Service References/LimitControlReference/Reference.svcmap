@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="c9f9d146-f7e7-4aea-8d13-54f75d9ec124" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:57693/LimitControl.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="LimitControl.disco" MetadataType="Disco" ID="9e535a9a-4bdb-43ed-840b-d473669db462" SourceId="1" SourceUrl="http://localhost:57693/LimitControl.svc?disco" />
+    <MetadataFile FileName="LimitControl.xsd" MetadataType="Schema" ID="94eef00a-37f7-4de3-b58d-c57580439b72" SourceId="1" SourceUrl="http://localhost:57693/LimitControl.svc?xsd=xsd1" />
+    <MetadataFile FileName="LimitControl3.xsd" MetadataType="Schema" ID="0816df4b-0647-4d8f-a5fb-460bd3215879" SourceId="1" SourceUrl="http://localhost:57693/LimitControl.svc?xsd=xsd3" />
+    <MetadataFile FileName="LimitControl.wsdl" MetadataType="Wsdl" ID="9d348917-4eb5-470a-8709-4ba9d7d0366f" SourceId="1" SourceUrl="http://localhost:57693/LimitControl.svc?wsdl" />
+    <MetadataFile FileName="LimitControl2.xsd" MetadataType="Schema" ID="1d0fa9ad-8e7d-4d8e-a257-695145ff8900" SourceId="1" SourceUrl="http://localhost:57693/LimitControl.svc?xsd=xsd2" />
+    <MetadataFile FileName="LimitControl1.xsd" MetadataType="Schema" ID="0234a497-3bb1-4c06-8272-81f24345b1aa" SourceId="1" SourceUrl="http://localhost:57693/LimitControl.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

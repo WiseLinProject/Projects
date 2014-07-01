@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Oleit.AS.Service.DataObject" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Oleit.AS.Service.DataObject" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:53695/SettleService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="Entity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Currency" nillable="true" type="tns:Currency" />
+      <xs:element minOccurs="0" name="Enable" type="xs:int" />
+      <xs:element minOccurs="0" name="EntityID" type="xs:int" />
+      <xs:element minOccurs="0" name="EntityName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EntityType" type="tns:EntityType" />
+      <xs:element minOccurs="0" name="ExchangeRate" type="xs:decimal" />
+      <xs:element minOccurs="0" name="IsAccount" type="xs:int" />
+      <xs:element minOccurs="0" name="IsLastLevel" type="xs:int" />
+      <xs:element minOccurs="0" name="ParentID" type="xs:int" />
+      <xs:element minOccurs="0" name="SubEntities" nillable="true" type="tns:ArrayOfEntity" />
+      <xs:element minOccurs="0" name="SumType" type="tns:SumType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Entity" nillable="true" type="tns:Entity" />
+  <xs:complexType name="Currency">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CurrencyID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Currency" nillable="true" type="tns:Currency" />
+  <xs:simpleType name="EntityType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="PAndL">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Cash">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Expence">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="BadDebt">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="MLJ">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">5</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="EntityType" nillable="true" type="tns:EntityType" />
+  <xs:complexType name="ArrayOfEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Entity" nillable="true" type="tns:Entity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEntity" nillable="true" type="tns:ArrayOfEntity" />
+  <xs:simpleType name="SumType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Not" />
+      <xs:enumeration value="Transaction" />
+      <xs:enumeration value="Subtotal" />
+      <xs:enumeration value="Super" />
+      <xs:enumeration value="Master" />
+      <xs:enumeration value="Agent" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="SumType" nillable="true" type="tns:SumType" />
+  <xs:complexType name="ArrayOfWeeklySummary">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="WeeklySummary" nillable="true" type="tns:WeeklySummary" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfWeeklySummary" nillable="true" type="tns:ArrayOfWeeklySummary" />
+  <xs:complexType name="WeeklySummary">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BaseBalance" type="xs:decimal" />
+      <xs:element minOccurs="0" name="BaseCurrency" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BasePrevBalance" type="xs:decimal" />
+      <xs:element minOccurs="0" name="BasePrevTransaction" type="xs:decimal" />
+      <xs:element minOccurs="0" name="BaseTransaction" type="xs:decimal" />
+      <xs:element minOccurs="0" name="BaseTransfer" type="xs:decimal" />
+      <xs:element minOccurs="0" name="BaseWinAndLoss" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ConfirmUser" nillable="true" type="tns:User" />
+      <xs:element minOccurs="0" name="Entity" nillable="true" type="tns:Entity" />
+      <xs:element minOccurs="0" name="ExchangeRate" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Period" nillable="true" type="tns:Period" />
+      <xs:element minOccurs="0" name="SGDBalance" type="xs:decimal" />
+      <xs:element minOccurs="0" name="SGDPrevBalance" type="xs:decimal" />
+      <xs:element minOccurs="0" name="SGDPrevTransaction" type="xs:decimal" />
+      <xs:element minOccurs="0" name="SGDTransaction" type="xs:decimal" />
+      <xs:element minOccurs="0" name="SGDTransfer" type="xs:decimal" />
+      <xs:element minOccurs="0" name="SGDWinAndLoss" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Status" type="tns:WeeklySummaryStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WeeklySummary" nillable="true" type="tns:WeeklySummary" />
+  <xs:complexType name="User">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Enable" type="xs:int" />
+      <xs:element minOccurs="0" name="UserID" type="xs:int" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserPWD" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="User" nillable="true" type="tns:User" />
+  <xs:complexType name="Period">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EndDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="PeriodNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StartDate" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Period" nillable="true" type="tns:Period" />
+  <xs:simpleType name="WeeklySummaryStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="Confirm" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="WeeklySummaryStatus" nillable="true" type="tns:WeeklySummaryStatus" />
+  <xs:complexType name="Record">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EntityID" type="xs:int" />
+      <xs:element minOccurs="0" name="JournalCollection" nillable="true" type="tns:ArrayOfJournal" />
+      <xs:element minOccurs="0" name="Period" nillable="true" type="tns:Period" />
+      <xs:element minOccurs="0" name="RecordID" type="xs:int" />
+      <xs:element minOccurs="0" name="RecordStatus" type="tns:RecordStatus" />
+      <xs:element minOccurs="0" name="Type" type="tns:RecordType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Record" nillable="true" type="tns:Record" />
+  <xs:complexType name="ArrayOfJournal">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Journal" nillable="true" type="tns:Journal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfJournal" nillable="true" type="tns:ArrayOfJournal" />
+  <xs:complexType name="Journal">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BaseAmount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="BaseCurrency" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DataTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="EntityID" type="xs:int" />
+      <xs:element minOccurs="0" name="EntryUser" nillable="true" type="tns:User" />
+      <xs:element minOccurs="0" name="ExchangeRate" type="xs:decimal" />
+      <xs:element minOccurs="0" name="RecordID" type="xs:int" />
+      <xs:element minOccurs="0" name="SGDAmount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="SequenceNo" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Journal" nillable="true" type="tns:Journal" />
+  <xs:simpleType name="RecordStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Normal" />
+      <xs:enumeration value="Confirm" />
+      <xs:enumeration value="Avoid" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="RecordStatus" nillable="true" type="tns:RecordStatus" />
+  <xs:simpleType name="RecordType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="WinAndLoss">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Transfer">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Transaction">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="RecordType" nillable="true" type="tns:RecordType" />
+</xs:schema>

@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="TransferAccess" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:57693/TransferAccess.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:57693/TransferAccess.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:57693/TransferAccess.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Oleit.AS.Service.DataObject" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ITransferAccess_Insert_InputMessage">
+    <wsdl:part name="parameters" element="tns:Insert" />
+  </wsdl:message>
+  <wsdl:message name="ITransferAccess_Insert_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITransferAccess_InsertDetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertDetail" />
+  </wsdl:message>
+  <wsdl:message name="ITransferAccess_InsertDetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITransferAccess_Update_InputMessage">
+    <wsdl:part name="parameters" element="tns:Update" />
+  </wsdl:message>
+  <wsdl:message name="ITransferAccess_Update_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITransferAccess_UpdateDetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDetail" />
+  </wsdl:message>
+  <wsdl:message name="ITransferAccess_UpdateDetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITransferAccess_UpdateDetailCollection_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDetailCollection" />
+  </wsdl:message>
+  <wsdl:message name="ITransferAccess_UpdateDetailCollection_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDetailCollectionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITransferAccess_Query_InputMessage">
+    <wsdl:part name="parameters" element="tns:Query" />
+  </wsdl:message>
+  <wsdl:message name="ITransferAccess_Query_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITransferAccess_QueryDetailCollection_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryDetailCollection" />
+  </wsdl:message>
+  <wsdl:message name="ITransferAccess_QueryDetailCollection_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryDetailCollectionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITransferAccess_QueryCollectionByToEntityID_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryCollectionByToEntityID" />
+  </wsdl:message>
+  <wsdl:message name="ITransferAccess_QueryCollectionByToEntityID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryCollectionByToEntityIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITransferAccess_QueryDetailCollectionByToEntityID_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryDetailCollectionByToEntityID" />
+  </wsdl:message>
+  <wsdl:message name="ITransferAccess_QueryDetailCollectionByToEntityID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryDetailCollectionByToEntityIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITransferAccess_QueryByEntityID_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryByEntityID" />
+  </wsdl:message>
+  <wsdl:message name="ITransferAccess_QueryByEntityID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryByEntityIDResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ITransferAccess">
+    <wsdl:operation name="Insert">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITransferAccess/Insert" message="tns:ITransferAccess_Insert_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITransferAccess/InsertResponse" message="tns:ITransferAccess_Insert_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertDetail">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITransferAccess/InsertDetail" message="tns:ITransferAccess_InsertDetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITransferAccess/InsertDetailResponse" message="tns:ITransferAccess_InsertDetail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Update">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITransferAccess/Update" message="tns:ITransferAccess_Update_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITransferAccess/UpdateResponse" message="tns:ITransferAccess_Update_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDetail">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITransferAccess/UpdateDetail" message="tns:ITransferAccess_UpdateDetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITransferAccess/UpdateDetailResponse" message="tns:ITransferAccess_UpdateDetail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDetailCollection">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITransferAccess/UpdateDetailCollection" message="tns:ITransferAccess_UpdateDetailCollection_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITransferAccess/UpdateDetailCollectionResponse" message="tns:ITransferAccess_UpdateDetailCollection_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Query">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITransferAccess/Query" message="tns:ITransferAccess_Query_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITransferAccess/QueryResponse" message="tns:ITransferAccess_Query_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryDetailCollection">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITransferAccess/QueryDetailCollection" message="tns:ITransferAccess_QueryDetailCollection_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITransferAccess/QueryDetailCollectionResponse" message="tns:ITransferAccess_QueryDetailCollection_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryCollectionByToEntityID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITransferAccess/QueryCollectionByToEntityID" message="tns:ITransferAccess_QueryCollectionByToEntityID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITransferAccess/QueryCollectionByToEntityIDResponse" message="tns:ITransferAccess_QueryCollectionByToEntityID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryDetailCollectionByToEntityID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITransferAccess/QueryDetailCollectionByToEntityID" message="tns:ITransferAccess_QueryDetailCollectionByToEntityID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITransferAccess/QueryDetailCollectionByToEntityIDResponse" message="tns:ITransferAccess_QueryDetailCollectionByToEntityID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryByEntityID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITransferAccess/QueryByEntityID" message="tns:ITransferAccess_QueryByEntityID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITransferAccess/QueryByEntityIDResponse" message="tns:ITransferAccess_QueryByEntityID_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ITransferAccess" type="tns:ITransferAccess">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Insert">
+      <soap:operation soapAction="http://tempuri.org/ITransferAccess/Insert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertDetail">
+      <soap:operation soapAction="http://tempuri.org/ITransferAccess/InsertDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Update">
+      <soap:operation soapAction="http://tempuri.org/ITransferAccess/Update" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDetail">
+      <soap:operation soapAction="http://tempuri.org/ITransferAccess/UpdateDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDetailCollection">
+      <soap:operation soapAction="http://tempuri.org/ITransferAccess/UpdateDetailCollection" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Query">
+      <soap:operation soapAction="http://tempuri.org/ITransferAccess/Query" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryDetailCollection">
+      <soap:operation soapAction="http://tempuri.org/ITransferAccess/QueryDetailCollection" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryCollectionByToEntityID">
+      <soap:operation soapAction="http://tempuri.org/ITransferAccess/QueryCollectionByToEntityID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryDetailCollectionByToEntityID">
+      <soap:operation soapAction="http://tempuri.org/ITransferAccess/QueryDetailCollectionByToEntityID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryByEntityID">
+      <soap:operation soapAction="http://tempuri.org/ITransferAccess/QueryByEntityID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TransferAccess">
+    <wsdl:port name="BasicHttpBinding_ITransferAccess" binding="tns:BasicHttpBinding_ITransferAccess">
+      <soap:address location="http://localhost:57693/TransferAccess.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

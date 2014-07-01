@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="56f49fa4-4480-4321-b71d-d0ec78e0f3e4" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies>
+      <ReferencedAssembly AssemblyName="Oleit.AS.Service.DataObject" />
+      <ReferencedAssembly AssemblyName="Oleit.AS.Service.LogicService" />
+    </ReferencedAssemblies>
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:53695/PeriodService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="PeriodService.disco" MetadataType="Disco" ID="b498dc4d-bd0d-4fec-86bc-a0ac241089fb" SourceId="1" SourceUrl="http://localhost:53695/PeriodService.svc?disco" />
+    <MetadataFile FileName="PeriodService.wsdl" MetadataType="Wsdl" ID="d0898586-3ce9-4c23-b1f5-eb8b858016e5" SourceId="1" SourceUrl="http://localhost:53695/PeriodService.svc?wsdl" />
+    <MetadataFile FileName="PeriodService.xsd" MetadataType="Schema" ID="6bf21b21-6762-4f46-b467-db9ff80fad4e" SourceId="1" SourceUrl="http://localhost:53695/PeriodService.svc?xsd=xsd1" />
+    <MetadataFile FileName="PeriodService1.xsd" MetadataType="Schema" ID="5e4dc36c-4a70-4ed4-9242-a58387085f38" SourceId="1" SourceUrl="http://localhost:53695/PeriodService.svc?xsd=xsd0" />
+    <MetadataFile FileName="PeriodService2.xsd" MetadataType="Schema" ID="b7bbc434-7294-4286-ac2b-93411092a581" SourceId="1" SourceUrl="http://localhost:53695/PeriodService.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

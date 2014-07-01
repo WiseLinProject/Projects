@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="47f7d7d2-3661-4e30-9aad-d9b795a50f17" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies>
+      <ReferencedAssembly AssemblyName="Oleit.AS.Service.DataObject" />
+      <ReferencedAssembly AssemblyName="Oleit.AS.Service.LogicService" />
+    </ReferencedAssemblies>
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:53695/EntityService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="EntityService.wsdl" MetadataType="Wsdl" ID="7c78ba6c-9aab-4853-9aa7-947afadfbb35" SourceId="1" SourceUrl="http://localhost:53695/EntityService.svc?wsdl" />
+    <MetadataFile FileName="EntityService.xsd" MetadataType="Schema" ID="223828cf-19af-4819-bbeb-d539558db18c" SourceId="1" SourceUrl="http://localhost:53695/EntityService.svc?xsd=xsd2" />
+    <MetadataFile FileName="EntityService1.xsd" MetadataType="Schema" ID="e420d535-75a9-4f89-8774-582cd8ac255a" SourceId="1" SourceUrl="http://localhost:53695/EntityService.svc?xsd=xsd3" />
+    <MetadataFile FileName="EntityService2.xsd" MetadataType="Schema" ID="ddecacae-b9ec-4480-85ce-ecb6149fc2d4" SourceId="1" SourceUrl="http://localhost:53695/EntityService.svc?xsd=xsd0" />
+    <MetadataFile FileName="EntityService3.xsd" MetadataType="Schema" ID="5a254cfe-31f8-45bc-bf8f-95aca6d2ed7c" SourceId="1" SourceUrl="http://localhost:53695/EntityService.svc?xsd=xsd1" />
+    <MetadataFile FileName="EntityService.disco" MetadataType="Disco" ID="fd912d4d-5f7d-4e61-9a56-648cfc7c46ac" SourceId="1" SourceUrl="http://localhost:53695/EntityService.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

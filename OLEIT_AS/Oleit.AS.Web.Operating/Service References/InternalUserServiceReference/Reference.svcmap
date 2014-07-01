@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="6b32bade-01c8-4332-bdaf-0400d8b95805" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies>
+      <ReferencedAssembly AssemblyName="Oleit.AS.Service.DataObject" />
+      <ReferencedAssembly AssemblyName="Oleit.AS.Service.LogicService" />
+    </ReferencedAssemblies>
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:53695/InternalUserService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="InternalUserService.xsd" MetadataType="Schema" ID="7e1eb5cd-9e91-49d4-90bb-dc5439413bbc" SourceId="1" SourceUrl="http://localhost:53695/InternalUserService.svc?xsd=xsd2" />
+    <MetadataFile FileName="InternalUserService.disco" MetadataType="Disco" ID="c5831072-ae0c-4cbd-a826-36d4af1cfad0" SourceId="1" SourceUrl="http://localhost:53695/InternalUserService.svc?disco" />
+    <MetadataFile FileName="InternalUserService.wsdl" MetadataType="Wsdl" ID="4ae53655-fc76-4869-9e96-60bc474c1aee" SourceId="1" SourceUrl="http://localhost:53695/InternalUserService.svc?wsdl" />
+    <MetadataFile FileName="InternalUserService1.xsd" MetadataType="Schema" ID="201ef1e4-fe50-43ff-956b-1bd70d5e8499" SourceId="1" SourceUrl="http://localhost:53695/InternalUserService.svc?xsd=xsd0" />
+    <MetadataFile FileName="InternalUserService2.xsd" MetadataType="Schema" ID="a6ae2fea-d7ff-41bc-8672-ea4323ec03de" SourceId="1" SourceUrl="http://localhost:53695/InternalUserService.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
