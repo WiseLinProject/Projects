@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="WeeklySummaryAccess" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:57693/WeeklySummaryAccess.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:57693/WeeklySummaryAccess.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:57693/WeeklySummaryAccess.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Oleit.AS.Service.DataObject" />
+      <xsd:import schemaLocation="http://localhost:57693/WeeklySummaryAccess.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IWeeklySummaryAccess_Insert1_InputMessage">
+    <wsdl:part name="parameters" element="tns:Insert1" />
+  </wsdl:message>
+  <wsdl:message name="IWeeklySummaryAccess_Insert1_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Insert1Response" />
+  </wsdl:message>
+  <wsdl:message name="IWeeklySummaryAccess_Insert2_InputMessage">
+    <wsdl:part name="parameters" element="tns:Insert2" />
+  </wsdl:message>
+  <wsdl:message name="IWeeklySummaryAccess_Insert2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Insert2Response" />
+  </wsdl:message>
+  <wsdl:message name="IWeeklySummaryAccess_Query1_InputMessage">
+    <wsdl:part name="parameters" element="tns:Query1" />
+  </wsdl:message>
+  <wsdl:message name="IWeeklySummaryAccess_Query1_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Query1Response" />
+  </wsdl:message>
+  <wsdl:message name="IWeeklySummaryAccess_Query_InputMessage">
+    <wsdl:part name="parameters" element="tns:Query" />
+  </wsdl:message>
+  <wsdl:message name="IWeeklySummaryAccess_Query_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWeeklySummaryAccess_QuerybyPeriod_InputMessage">
+    <wsdl:part name="parameters" element="tns:QuerybyPeriod" />
+  </wsdl:message>
+  <wsdl:message name="IWeeklySummaryAccess_QuerybyPeriod_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QuerybyPeriodResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWeeklySummaryAccess_QueryAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryAll" />
+  </wsdl:message>
+  <wsdl:message name="IWeeklySummaryAccess_QueryAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWeeklySummaryAccess_Query2_InputMessage">
+    <wsdl:part name="parameters" element="tns:Query2" />
+  </wsdl:message>
+  <wsdl:message name="IWeeklySummaryAccess_Query2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Query2Response" />
+  </wsdl:message>
+  <wsdl:message name="IWeeklySummaryAccess_Update1_InputMessage">
+    <wsdl:part name="parameters" element="tns:Update1" />
+  </wsdl:message>
+  <wsdl:message name="IWeeklySummaryAccess_Update1_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Update1Response" />
+  </wsdl:message>
+  <wsdl:message name="IWeeklySummaryAccess_Update2_InputMessage">
+    <wsdl:part name="parameters" element="tns:Update2" />
+  </wsdl:message>
+  <wsdl:message name="IWeeklySummaryAccess_Update2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Update2Response" />
+  </wsdl:message>
+  <wsdl:message name="IWeeklySummaryAccess_SubTotalConfirm_InputMessage">
+    <wsdl:part name="parameters" element="tns:SubTotalConfirm" />
+  </wsdl:message>
+  <wsdl:message name="IWeeklySummaryAccess_SubTotalConfirm_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SubTotalConfirmResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWeeklySummaryAccess_WinLossConfirm_InputMessage">
+    <wsdl:part name="parameters" element="tns:WinLossConfirm" />
+  </wsdl:message>
+  <wsdl:message name="IWeeklySummaryAccess_WinLossConfirm_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WinLossConfirmResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWeeklySummaryAccess_IsWeeklyConfirm_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsWeeklyConfirm" />
+  </wsdl:message>
+  <wsdl:message name="IWeeklySummaryAccess_IsWeeklyConfirm_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsWeeklyConfirmResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IWeeklySummaryAccess">
+    <wsdl:operation name="Insert1">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWeeklySummaryAccess/Insert1" message="tns:IWeeklySummaryAccess_Insert1_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWeeklySummaryAccess/Insert1Response" message="tns:IWeeklySummaryAccess_Insert1_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Insert2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWeeklySummaryAccess/Insert2" message="tns:IWeeklySummaryAccess_Insert2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWeeklySummaryAccess/Insert2Response" message="tns:IWeeklySummaryAccess_Insert2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Query1">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWeeklySummaryAccess/Query1" message="tns:IWeeklySummaryAccess_Query1_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWeeklySummaryAccess/Query1Response" message="tns:IWeeklySummaryAccess_Query1_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Query">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWeeklySummaryAccess/Query" message="tns:IWeeklySummaryAccess_Query_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWeeklySummaryAccess/QueryResponse" message="tns:IWeeklySummaryAccess_Query_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QuerybyPeriod">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWeeklySummaryAccess/QuerybyPeriod" message="tns:IWeeklySummaryAccess_QuerybyPeriod_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWeeklySummaryAccess/QuerybyPeriodResponse" message="tns:IWeeklySummaryAccess_QuerybyPeriod_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWeeklySummaryAccess/QueryAll" message="tns:IWeeklySummaryAccess_QueryAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWeeklySummaryAccess/QueryAllResponse" message="tns:IWeeklySummaryAccess_QueryAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Query2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWeeklySummaryAccess/Query2" message="tns:IWeeklySummaryAccess_Query2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWeeklySummaryAccess/Query2Response" message="tns:IWeeklySummaryAccess_Query2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Update1">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWeeklySummaryAccess/Update1" message="tns:IWeeklySummaryAccess_Update1_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWeeklySummaryAccess/Update1Response" message="tns:IWeeklySummaryAccess_Update1_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Update2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWeeklySummaryAccess/Update2" message="tns:IWeeklySummaryAccess_Update2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWeeklySummaryAccess/Update2Response" message="tns:IWeeklySummaryAccess_Update2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SubTotalConfirm">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWeeklySummaryAccess/SubTotalConfirm" message="tns:IWeeklySummaryAccess_SubTotalConfirm_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWeeklySummaryAccess/SubTotalConfirmResponse" message="tns:IWeeklySummaryAccess_SubTotalConfirm_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WinLossConfirm">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWeeklySummaryAccess/WinLossConfirm" message="tns:IWeeklySummaryAccess_WinLossConfirm_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWeeklySummaryAccess/WinLossConfirmResponse" message="tns:IWeeklySummaryAccess_WinLossConfirm_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsWeeklyConfirm">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWeeklySummaryAccess/IsWeeklyConfirm" message="tns:IWeeklySummaryAccess_IsWeeklyConfirm_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWeeklySummaryAccess/IsWeeklyConfirmResponse" message="tns:IWeeklySummaryAccess_IsWeeklyConfirm_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IWeeklySummaryAccess" type="tns:IWeeklySummaryAccess">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Insert1">
+      <soap:operation soapAction="http://tempuri.org/IWeeklySummaryAccess/Insert1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insert2">
+      <soap:operation soapAction="http://tempuri.org/IWeeklySummaryAccess/Insert2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Query1">
+      <soap:operation soapAction="http://tempuri.org/IWeeklySummaryAccess/Query1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Query">
+      <soap:operation soapAction="http://tempuri.org/IWeeklySummaryAccess/Query" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QuerybyPeriod">
+      <soap:operation soapAction="http://tempuri.org/IWeeklySummaryAccess/QuerybyPeriod" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryAll">
+      <soap:operation soapAction="http://tempuri.org/IWeeklySummaryAccess/QueryAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Query2">
+      <soap:operation soapAction="http://tempuri.org/IWeeklySummaryAccess/Query2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Update1">
+      <soap:operation soapAction="http://tempuri.org/IWeeklySummaryAccess/Update1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Update2">
+      <soap:operation soapAction="http://tempuri.org/IWeeklySummaryAccess/Update2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubTotalConfirm">
+      <soap:operation soapAction="http://tempuri.org/IWeeklySummaryAccess/SubTotalConfirm" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WinLossConfirm">
+      <soap:operation soapAction="http://tempuri.org/IWeeklySummaryAccess/WinLossConfirm" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsWeeklyConfirm">
+      <soap:operation soapAction="http://tempuri.org/IWeeklySummaryAccess/IsWeeklyConfirm" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WeeklySummaryAccess">
+    <wsdl:port name="BasicHttpBinding_IWeeklySummaryAccess" binding="tns:BasicHttpBinding_IWeeklySummaryAccess">
+      <soap:address location="http://localhost:57693/WeeklySummaryAccess.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

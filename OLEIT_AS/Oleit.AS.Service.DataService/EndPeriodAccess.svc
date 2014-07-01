@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="Oleit.AS.Service.DataService.EndPeriodAccess" CodeBehind="EndPeriodAccess.svc.cs" %>

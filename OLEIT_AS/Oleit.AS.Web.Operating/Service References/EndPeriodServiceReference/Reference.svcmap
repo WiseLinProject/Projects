@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="d181e099-f2c5-4d79-bcfb-3f92706520c7" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies>
+      <ReferencedAssembly AssemblyName="Oleit.AS.Service.DataObject" />
+      <ReferencedAssembly AssemblyName="Oleit.AS.Service.LogicService" />
+    </ReferencedAssemblies>
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:53695/EndPeriodService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="EndPeriodService.xsd" MetadataType="Schema" ID="e4600e5e-09cd-4b9c-be62-153c47f2b6e7" SourceId="1" SourceUrl="http://localhost:53695/EndPeriodService.svc?xsd=xsd0" />
+    <MetadataFile FileName="EndPeriodService1.xsd" MetadataType="Schema" ID="7ab87b4e-bde9-44f4-9dab-f3f56e564add" SourceId="1" SourceUrl="http://localhost:53695/EndPeriodService.svc?xsd=xsd2" />
+    <MetadataFile FileName="EndPeriodService.disco" MetadataType="Disco" ID="7b8780c9-6da0-4950-9049-8b8f6c3a2f49" SourceId="1" SourceUrl="http://localhost:53695/EndPeriodService.svc?disco" />
+    <MetadataFile FileName="EndPeriodService2.xsd" MetadataType="Schema" ID="50f87edd-c4d0-4d44-9857-435bf8f462ef" SourceId="1" SourceUrl="http://localhost:53695/EndPeriodService.svc?xsd=xsd1" />
+    <MetadataFile FileName="EndPeriodService.wsdl" MetadataType="Wsdl" ID="3d5a525e-ad5d-41c9-8db8-440a86ace6ab" SourceId="1" SourceUrl="http://localhost:53695/EndPeriodService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="UserAccess" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:57693/UserAccess.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:57693/UserAccess.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:57693/UserAccess.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Oleit.AS.Service.DataObject" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IUserAccess_Insertuser_InputMessage">
+    <wsdl:part name="parameters" element="tns:Insertuser" />
+  </wsdl:message>
+  <wsdl:message name="IUserAccess_Insertuser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertuserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserAccess_InsertuserCollection_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertuserCollection" />
+  </wsdl:message>
+  <wsdl:message name="IUserAccess_InsertuserCollection_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertuserCollectionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserAccess_QueryuserID_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryuserID" />
+  </wsdl:message>
+  <wsdl:message name="IUserAccess_QueryuserID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryuserIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserAccess_QueryuserName_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryuserName" />
+  </wsdl:message>
+  <wsdl:message name="IUserAccess_QueryuserName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryuserNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserAccess_QueryAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryAll" />
+  </wsdl:message>
+  <wsdl:message name="IUserAccess_QueryAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserAccess_Updateuser_InputMessage">
+    <wsdl:part name="parameters" element="tns:Updateuser" />
+  </wsdl:message>
+  <wsdl:message name="IUserAccess_Updateuser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateuserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserAccess_UpdateuserCollection_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateuserCollection" />
+  </wsdl:message>
+  <wsdl:message name="IUserAccess_UpdateuserCollection_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateuserCollectionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserAccess_Disable_InputMessage">
+    <wsdl:part name="parameters" element="tns:Disable" />
+  </wsdl:message>
+  <wsdl:message name="IUserAccess_Disable_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DisableResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserAccess_DisableUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:DisableUser" />
+  </wsdl:message>
+  <wsdl:message name="IUserAccess_DisableUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DisableUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserAccess_ChangePassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChangePassword" />
+  </wsdl:message>
+  <wsdl:message name="IUserAccess_ChangePassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChangePasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserAccess_UpdateRoles_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRoles" />
+  </wsdl:message>
+  <wsdl:message name="IUserAccess_UpdateRoles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRolesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserAccess_UpdaterolesCollection_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdaterolesCollection" />
+  </wsdl:message>
+  <wsdl:message name="IUserAccess_UpdaterolesCollection_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdaterolesCollectionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserAccess_QueryRoles_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryRoles" />
+  </wsdl:message>
+  <wsdl:message name="IUserAccess_QueryRoles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryRolesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserAccess_CheckRole_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckRole" />
+  </wsdl:message>
+  <wsdl:message name="IUserAccess_CheckRole_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserAccess_GetAllRoles_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllRoles" />
+  </wsdl:message>
+  <wsdl:message name="IUserAccess_GetAllRoles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllRolesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserAccess_GetMenu_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMenu" />
+  </wsdl:message>
+  <wsdl:message name="IUserAccess_GetMenu_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMenuResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserAccess_CheckPassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckPassword" />
+  </wsdl:message>
+  <wsdl:message name="IUserAccess_CheckPassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckPasswordResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IUserAccess">
+    <wsdl:operation name="Insertuser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserAccess/Insertuser" message="tns:IUserAccess_Insertuser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserAccess/InsertuserResponse" message="tns:IUserAccess_Insertuser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertuserCollection">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserAccess/InsertuserCollection" message="tns:IUserAccess_InsertuserCollection_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserAccess/InsertuserCollectionResponse" message="tns:IUserAccess_InsertuserCollection_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryuserID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserAccess/QueryuserID" message="tns:IUserAccess_QueryuserID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserAccess/QueryuserIDResponse" message="tns:IUserAccess_QueryuserID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryuserName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserAccess/QueryuserName" message="tns:IUserAccess_QueryuserName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserAccess/QueryuserNameResponse" message="tns:IUserAccess_QueryuserName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserAccess/QueryAll" message="tns:IUserAccess_QueryAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserAccess/QueryAllResponse" message="tns:IUserAccess_QueryAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Updateuser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserAccess/Updateuser" message="tns:IUserAccess_Updateuser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserAccess/UpdateuserResponse" message="tns:IUserAccess_Updateuser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateuserCollection">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserAccess/UpdateuserCollection" message="tns:IUserAccess_UpdateuserCollection_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserAccess/UpdateuserCollectionResponse" message="tns:IUserAccess_UpdateuserCollection_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Disable">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserAccess/Disable" message="tns:IUserAccess_Disable_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserAccess/DisableResponse" message="tns:IUserAccess_Disable_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DisableUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserAccess/DisableUser" message="tns:IUserAccess_DisableUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserAccess/DisableUserResponse" message="tns:IUserAccess_DisableUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserAccess/ChangePassword" message="tns:IUserAccess_ChangePassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserAccess/ChangePasswordResponse" message="tns:IUserAccess_ChangePassword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRoles">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserAccess/UpdateRoles" message="tns:IUserAccess_UpdateRoles_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserAccess/UpdateRolesResponse" message="tns:IUserAccess_UpdateRoles_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdaterolesCollection">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserAccess/UpdaterolesCollection" message="tns:IUserAccess_UpdaterolesCollection_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserAccess/UpdaterolesCollectionResponse" message="tns:IUserAccess_UpdaterolesCollection_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryRoles">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserAccess/QueryRoles" message="tns:IUserAccess_QueryRoles_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserAccess/QueryRolesResponse" message="tns:IUserAccess_QueryRoles_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckRole">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserAccess/CheckRole" message="tns:IUserAccess_CheckRole_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserAccess/CheckRoleResponse" message="tns:IUserAccess_CheckRole_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllRoles">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserAccess/GetAllRoles" message="tns:IUserAccess_GetAllRoles_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserAccess/GetAllRolesResponse" message="tns:IUserAccess_GetAllRoles_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMenu">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserAccess/GetMenu" message="tns:IUserAccess_GetMenu_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserAccess/GetMenuResponse" message="tns:IUserAccess_GetMenu_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckPassword">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserAccess/CheckPassword" message="tns:IUserAccess_CheckPassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserAccess/CheckPasswordResponse" message="tns:IUserAccess_CheckPassword_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IUserAccess" type="tns:IUserAccess">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Insertuser">
+      <soap:operation soapAction="http://tempuri.org/IUserAccess/Insertuser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertuserCollection">
+      <soap:operation soapAction="http://tempuri.org/IUserAccess/InsertuserCollection" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryuserID">
+      <soap:operation soapAction="http://tempuri.org/IUserAccess/QueryuserID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryuserName">
+      <soap:operation soapAction="http://tempuri.org/IUserAccess/QueryuserName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryAll">
+      <soap:operation soapAction="http://tempuri.org/IUserAccess/QueryAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Updateuser">
+      <soap:operation soapAction="http://tempuri.org/IUserAccess/Updateuser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateuserCollection">
+      <soap:operation soapAction="http://tempuri.org/IUserAccess/UpdateuserCollection" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Disable">
+      <soap:operation soapAction="http://tempuri.org/IUserAccess/Disable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DisableUser">
+      <soap:operation soapAction="http://tempuri.org/IUserAccess/DisableUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <soap:operation soapAction="http://tempuri.org/IUserAccess/ChangePassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRoles">
+      <soap:operation soapAction="http://tempuri.org/IUserAccess/UpdateRoles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdaterolesCollection">
+      <soap:operation soapAction="http://tempuri.org/IUserAccess/UpdaterolesCollection" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryRoles">
+      <soap:operation soapAction="http://tempuri.org/IUserAccess/QueryRoles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckRole">
+      <soap:operation soapAction="http://tempuri.org/IUserAccess/CheckRole" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllRoles">
+      <soap:operation soapAction="http://tempuri.org/IUserAccess/GetAllRoles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMenu">
+      <soap:operation soapAction="http://tempuri.org/IUserAccess/GetMenu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckPassword">
+      <soap:operation soapAction="http://tempuri.org/IUserAccess/CheckPassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="UserAccess">
+    <wsdl:port name="BasicHttpBinding_IUserAccess" binding="tns:BasicHttpBinding_IUserAccess">
+      <soap:address location="http://localhost:57693/UserAccess.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

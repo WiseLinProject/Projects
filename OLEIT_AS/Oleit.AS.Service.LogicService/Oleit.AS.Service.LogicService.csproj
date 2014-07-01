@@ -1,0 +1,559 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{348E74AD-13B0-48F9-9A75-F0DFF1DF5722}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Oleit.AS.Service.LogicService</RootNamespace>
+    <AssemblyName>Oleit.AS.Service.LogicService</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <WcfConfigValidationEnabled>True</WcfConfigValidationEnabled>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.DirectoryServices.AccountManagement" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AccountService.svc" />
+    <Content Include="CalculateService.svc" />
+    <Content Include="CurrencyService.svc" />
+    <Content Include="DataEntryService.svc" />
+    <Content Include="EndPeriodService.svc" />
+    <Content Include="EntityService.svc" />
+    <Content Include="LimitControlService.svc" />
+    <Content Include="MenuService.svc" />
+    <Content Include="MLJService.svc" />
+    <Content Include="PAndLService.svc" />
+    <Content Include="Properties\DataSources\Oleit.AS.Service.DataObject.Transfer.datasource" />
+    <Content Include="Properties\DataSources\Oleit.AS.Service.DataObject.TransferDetail.datasource" />
+    <Content Include="Properties\DataSources\Oleit.AS.Service.DataObject.Transaction.datasource" />
+    <Content Include="Properties\DataSources\Oleit.AS.Service.DataObject.MLJJournal.datasource" />
+    <Content Include="Properties\DataSources\Oleit.AS.Service.DataObject.MLJRecord.datasource" />
+    <Content Include="Properties\DataSources\Oleit.AS.Service.DataObject.StatusColor.datasource" />
+    <Content Include="Properties\DataSources\Oleit.AS.Service.DataObject.FuncMenu.datasource" />
+    <Content Include="Properties\DataSources\System.Data.DataTable.datasource" />
+    <Content Include="Properties\DataSources\System.Data.DataSet.datasource" />
+    <Content Include="Properties\DataSources\Oleit.AS.Service.DataObject.EndPeriod.datasource" />
+    <Content Include="Service References\EndPeriodAccessReference\EndPeriodAccess.wsdl" />
+    <None Include="Service References\EndPeriodAccessReference\EndPeriodAccess.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EndPeriodAccessReference\EndPeriodAccess1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EndPeriodAccessReference\EndPeriodAccess2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EntityAccessReference\EntityAccess.wsdl" />
+    <None Include="Service References\EntityAccessReference\EntityAccess.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EntityAccessReference\EntityAccess1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EntityAccessReference\EntityAccess2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LimitControlAccessReference\LimitControl.wsdl" />
+    <None Include="Service References\LimitControlAccessReference\LimitControl.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LimitControlAccessReference\LimitControl1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LimitControlAccessReference\LimitControl2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LimitControlAccessReference\LimitControl3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MenuAccessReference\MenuAccess.disco" />
+    <None Include="Service References\MenuAccessReference\configuration91.svcinfo" />
+    <None Include="Service References\MenuAccessReference\configuration.svcinfo" />
+    <None Include="Service References\MenuAccessReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\MLJRecordAccessReference\MLJRecordAccess.wsdl" />
+    <None Include="Service References\MenuAccessReference\MenuAccess.wsdl" />
+    <None Include="Service References\MenuAccessReference\MenuAccess.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MenuAccessReference\MenuAccess1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MenuAccessReference\MenuAccess2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MenuAccessReference\MenuAccess3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MLJRecordAccessReference\MLJRecordAccess.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MLJRecordAccessReference\MLJRecordAccess1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MLJRecordAccessReference\MLJRecordAccess2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MLJRecordAccessReference\MLJRecordAccess3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\RecordAccessReference\RecordAccess3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\RecordAccessReference\RecordAccess4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TransactionAccessReference\TransactionAccess.wsdl" />
+    <None Include="Service References\TransactionAccessReference\TransactionAccess.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TransactionAccessReference\TransactionAccess1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TransactionAccessReference\TransactionAccess2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TransferAccessReference\TransferAccess.disco" />
+    <None Include="Service References\TransferAccessReference\configuration91.svcinfo" />
+    <None Include="Service References\TransferAccessReference\configuration.svcinfo" />
+    <None Include="Service References\TransferAccessReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\TransactionAccessReference\TransactionAccess.disco" />
+    <None Include="Service References\TransactionAccessReference\configuration91.svcinfo" />
+    <None Include="Service References\TransactionAccessReference\configuration.svcinfo" />
+    <None Include="Service References\TransactionAccessReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\MLJRecordAccessReference\MLJRecordAccess.disco" />
+    <None Include="Service References\MLJRecordAccessReference\configuration91.svcinfo" />
+    <None Include="Service References\MLJRecordAccessReference\configuration.svcinfo" />
+    <None Include="Service References\MLJRecordAccessReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\LimitControlAccessReference\LimitControl.disco" />
+    <None Include="Service References\LimitControlAccessReference\configuration91.svcinfo" />
+    <None Include="Service References\LimitControlAccessReference\configuration.svcinfo" />
+    <None Include="Service References\LimitControlAccessReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Service References\EndPeriodAccessReference\EndPeriodAccess.disco" />
+    <Content Include="Service References\EndPeriodAccessReference\configuration91.svcinfo" />
+    <Content Include="Service References\EndPeriodAccessReference\configuration.svcinfo" />
+    <Content Include="Service References\EndPeriodAccessReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <None Include="Service References\EntityAccessReference\EntityAccess.disco" />
+    <None Include="Service References\EntityAccessReference\configuration91.svcinfo" />
+    <None Include="Service References\EntityAccessReference\configuration.svcinfo" />
+    <None Include="Service References\EntityAccessReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="SystemDataService.svc" />
+    <Content Include="TallyService.svc" />
+    <Content Include="InternalUserService.svc" />
+    <Content Include="PeriodService.svc" />
+    <Content Include="PropertiesService.svc" />
+    <Content Include="ReportService.svc" />
+    <Content Include="Properties\DataSources\Oleit.AS.Service.DataObject.Currency.datasource" />
+    <Content Include="Properties\DataSources\Oleit.AS.Service.DataObject.Property.datasource" />
+    <Content Include="Properties\DataSources\Oleit.AS.Service.DataObject.Period.datasource" />
+    <Content Include="Properties\DataSources\Oleit.AS.Service.DataObject.Account.datasource" />
+    <Content Include="Properties\DataSources\Oleit.AS.Service.DataObject.CashEntity.datasource" />
+    <Content Include="Properties\DataSources\Oleit.AS.Service.DataObject.Entity.datasource" />
+    <Content Include="Properties\DataSources\Oleit.AS.Service.DataObject.Menu1.datasource" />
+    <Content Include="Properties\DataSources\Oleit.AS.Service.DataObject.Role1.datasource" />
+    <Content Include="Properties\DataSources\Oleit.AS.Service.DataObject.User1.datasource" />
+    <Content Include="Properties\DataSources\Oleit.AS.Service.DataObject.Journal.datasource" />
+    <Content Include="Properties\DataSources\Oleit.AS.Service.DataObject.Record.datasource" />
+    <Content Include="Properties\DataSources\Oleit.AS.Service.DataObject.WeeklySummary.datasource" />
+    <Content Include="Properties\DataSources\Oleit.AS.Service.DataObject.Relation.datasource" />
+    <None Include="Service References\CurrencyAccessReference\CurrencyAccess.disco" />
+    <None Include="Service References\CurrencyAccessReference\configuration91.svcinfo" />
+    <None Include="Service References\CurrencyAccessReference\configuration.svcinfo" />
+    <None Include="Service References\CurrencyAccessReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\PeriodAccessReference\PeriodAccess.wsdl" />
+    <None Include="Service References\PeriodAccessReference\PeriodAccess.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PeriodAccessReference\PeriodAccess1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PeriodAccessReference\PeriodAccess2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PropertyAccessReference\PropertyAccess.disco" />
+    <None Include="Service References\PropertyAccessReference\configuration91.svcinfo" />
+    <None Include="Service References\PropertyAccessReference\configuration.svcinfo" />
+    <None Include="Service References\PropertyAccessReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\PeriodAccessReference\PeriodAccess.disco" />
+    <None Include="Service References\PeriodAccessReference\configuration91.svcinfo" />
+    <None Include="Service References\PeriodAccessReference\configuration.svcinfo" />
+    <None Include="Service References\PeriodAccessReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\RecordAccessReference\RecordAccess.wsdl" />
+    <None Include="Service References\RecordAccessReference\RecordAccess.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\RecordAccessReference\RecordAccess1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\RecordAccessReference\RecordAccess2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TransferAccessReference\TransferAccess.wsdl" />
+    <None Include="Service References\TransferAccessReference\TransferAccess.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TransferAccessReference\TransferAccess1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TransferAccessReference\TransferAccess2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserAccessReference\UserAccess.disco" />
+    <None Include="Service References\UserAccessReference\configuration91.svcinfo" />
+    <None Include="Service References\UserAccessReference\configuration.svcinfo" />
+    <None Include="Service References\UserAccessReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\RecordAccessReference\RecordAccess.disco" />
+    <None Include="Service References\RecordAccessReference\configuration91.svcinfo" />
+    <None Include="Service References\RecordAccessReference\configuration.svcinfo" />
+    <None Include="Service References\RecordAccessReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\WeeklySummaryReference\WeeklySummaryAccess.disco" />
+    <None Include="Service References\WeeklySummaryReference\configuration91.svcinfo" />
+    <None Include="Service References\WeeklySummaryReference\configuration.svcinfo" />
+    <None Include="Service References\WeeklySummaryReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="SettleService.svc" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountService.svc.cs">
+      <DependentUpon>AccountService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="CalculateService.svc.cs">
+      <DependentUpon>CalculateService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Common\EndpointName.cs" />
+    <Compile Include="Common\ExtensionMethods.cs" />
+    <Compile Include="Common\RecordHelper.cs" />
+    <Compile Include="Common\SpecialProperty.cs" />
+    <Compile Include="CurrencyService.svc.cs">
+      <DependentUpon>CurrencyService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="DataEntryService.svc.cs">
+      <DependentUpon>DataEntryService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="EndPeriodService.svc.cs">
+      <DependentUpon>EndPeriodService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="EntityService.svc.cs">
+      <DependentUpon>EntityService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="InterfaceContract\IEndPeriodService.cs" />
+    <Compile Include="InterfaceContract\ILimitControlService.cs" />
+    <Compile Include="InterfaceContract\IMenuService.cs" />
+    <Compile Include="InterfaceContract\IAccountService.cs" />
+    <Compile Include="InterfaceContract\ICalculateService.cs" />
+    <Compile Include="InterfaceContract\ICurrencyService.cs" />
+    <Compile Include="InterfaceContract\IDataEntryService.cs" />
+    <Compile Include="InterfaceContract\IEntityService.cs" />
+    <Compile Include="InterfaceContract\IInternalUserService.cs" />
+    <Compile Include="InterfaceContract\IMLJService.cs" />
+    <Compile Include="InterfaceContract\IPeriodService.cs" />
+    <Compile Include="InterfaceContract\IPropertiesService.cs" />
+    <Compile Include="InterfaceContract\IReportService.cs" />
+    <Compile Include="InterfaceContract\ISettleService.cs" />
+    <Compile Include="InterfaceContract\ISystemDataService.cs" />
+    <Compile Include="InterfaceContract\ITallyService.cs" />
+    <Compile Include="InterfaceContract\IPAndLService.cs" />
+    <Compile Include="LimitControlService.svc.cs">
+      <DependentUpon>LimitControlService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="MenuService.svc.cs">
+      <DependentUpon>MenuService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="MLJService.svc.cs">
+      <DependentUpon>MLJService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="PAndLService.svc.cs">
+      <DependentUpon>PAndLService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\EndPeriodAccessReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\EntityAccessReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\LimitControlAccessReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\MenuAccessReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\MLJRecordAccessReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\TransactionAccessReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\TransferAccessReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="SystemDataService.svc.cs">
+      <DependentUpon>SystemDataService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="TallyService.svc.cs">
+      <DependentUpon>TallyService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="InternalUserService.svc.cs">
+      <DependentUpon>InternalUserService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="PeriodService.svc.cs">
+      <DependentUpon>PeriodService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="PropertiesService.svc.cs">
+      <DependentUpon>PropertiesService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportService.svc.cs">
+      <DependentUpon>ReportService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CurrencyAccessReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\PeriodAccessReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\PropertyAccessReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\RecordAccessReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\UserAccessReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\WeeklySummaryReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="SettleService.svc.cs">
+      <DependentUpon>SettleService.svc</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CurrencyAccessReference\CurrencyAccess.wsdl" />
+    <None Include="Service References\CurrencyAccessReference\CurrencyAccess.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CurrencyAccessReference\CurrencyAccess1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CurrencyAccessReference\CurrencyAccess2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PropertyAccessReference\PropertyAccess.wsdl" />
+    <None Include="Service References\PropertyAccessReference\PropertyAccess.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PropertyAccessReference\PropertyAccess1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PropertyAccessReference\PropertyAccess2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserAccessReference\UserAccess.wsdl" />
+    <None Include="Service References\UserAccessReference\UserAccess.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserAccessReference\UserAccess1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserAccessReference\UserAccess2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WeeklySummaryReference\WeeklySummaryAccess.wsdl" />
+    <None Include="Service References\WeeklySummaryReference\WeeklySummaryAccess.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WeeklySummaryReference\WeeklySummaryAccess1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WeeklySummaryReference\WeeklySummaryAccess2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WeeklySummaryReference\WeeklySummaryAccess3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\CurrencyAccessReference\" />
+    <WCFMetadataStorage Include="Service References\EndPeriodAccessReference\" />
+    <WCFMetadataStorage Include="Service References\EntityAccessReference\" />
+    <WCFMetadataStorage Include="Service References\LimitControlAccessReference\" />
+    <WCFMetadataStorage Include="Service References\MenuAccessReference\" />
+    <WCFMetadataStorage Include="Service References\MLJRecordAccessReference\" />
+    <WCFMetadataStorage Include="Service References\PeriodAccessReference\" />
+    <WCFMetadataStorage Include="Service References\PropertyAccessReference\" />
+    <WCFMetadataStorage Include="Service References\RecordAccessReference\" />
+    <WCFMetadataStorage Include="Service References\TransactionAccessReference\" />
+    <WCFMetadataStorage Include="Service References\TransferAccessReference\" />
+    <WCFMetadataStorage Include="Service References\UserAccessReference\" />
+    <WCFMetadataStorage Include="Service References\WeeklySummaryReference\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Oleit.AS.Service.DataObject\Oleit.AS.Service.DataObject.csproj">
+      <Project>{f134a18d-da4f-46cc-8792-d25899a7c528}</Project>
+      <Name>Oleit.AS.Service.DataObject</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>53695</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:57697/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

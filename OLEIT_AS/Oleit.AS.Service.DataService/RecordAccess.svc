@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="Oleit.AS.Service.DataService.WCFService.RecordAccess" CodeBehind="RecordAccess.svc.cs" %>

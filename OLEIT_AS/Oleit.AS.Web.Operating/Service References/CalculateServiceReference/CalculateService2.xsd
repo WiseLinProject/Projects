@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:53695/CalculateService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Oleit.AS.Service.DataObject" />
+  <xs:import schemaLocation="http://localhost:53695/CalculateService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://localhost:53695/CalculateService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System" />
+  <xs:element name="AutoJournal">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Oleit.AS.Service.DataObject" minOccurs="0" name="pAndLEntities" nillable="true" type="q1:ArrayOfJournal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AutoJournalResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Oleit.AS.Service.DataObject" minOccurs="0" name="AutoJournalResult" nillable="true" type="q2:ArrayOfJournal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetWeeklySummary">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="entityID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetWeeklySummaryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Oleit.AS.Service.DataObject" minOccurs="0" name="GetWeeklySummaryResult" nillable="true" type="q3:ArrayOfWeeklySummary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HasWeeklySummary">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Oleit.AS.Service.DataObject" minOccurs="0" name="entity" nillable="true" type="q4:Entity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HasWeeklySummaryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="HasWeeklySummaryResult" nillable="true" type="q5:ArrayOfKeyValueOfintboolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Subtotal">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="entryUserID" type="xs:int" />
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Oleit.AS.Service.DataObject" minOccurs="0" name="entity" nillable="true" type="q6:Entity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SubtotalResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Oleit.AS.Service.DataObject" minOccurs="0" name="SubtotalResult" nillable="true" type="q7:Transfer" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Transfer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="entryUserID" type="xs:int" />
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Oleit.AS.Service.DataObject" minOccurs="0" name="entityCollection" nillable="true" type="q8:ArrayOfEntity" />
+        <xs:element xmlns:q9="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="baseTransfer" nillable="true" type="q9:ArrayOfdecimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TransferResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/System" minOccurs="0" name="TransferResult" nillable="true" type="q10:TupleOfTransferEntityCgf2UYTj" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExcelTransfer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Oleit.AS.Service.DataObject" minOccurs="0" name="entityCollection" nillable="true" type="q11:ArrayOfEntity" />
+        <xs:element xmlns:q12="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="baseTransfer" nillable="true" type="q12:ArrayOfdecimal" />
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Oleit.AS.Service.DataObject" minOccurs="0" name="wsc" nillable="true" type="q13:ArrayOfWeeklySummary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExcelTransferResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/System" minOccurs="0" name="ExcelTransferResult" nillable="true" type="q14:TupleOfTransferEntityCgf2UYTj" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="e16c0da6-11d0-4083-9b8c-c38e4e9130b4" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies>
+      <ReferencedAssembly AssemblyName="Oleit.AS.Service.DataObject" />
+      <ReferencedAssembly AssemblyName="Oleit.AS.Service.LogicService" />
+    </ReferencedAssemblies>
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:53695/SettleService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SettleService.wsdl" MetadataType="Wsdl" ID="2c4f480d-6983-4ae1-9e55-d45cd630a171" SourceId="1" SourceUrl="http://localhost:53695/SettleService.svc?wsdl" />
+    <MetadataFile FileName="SettleService.xsd" MetadataType="Schema" ID="b674536b-1cd0-40ec-993b-cdf5ea142b4b" SourceId="1" SourceUrl="http://localhost:53695/SettleService.svc?xsd=xsd0" />
+    <MetadataFile FileName="SettleService1.xsd" MetadataType="Schema" ID="97dd22eb-8177-4a2c-94d5-1ad4e0426950" SourceId="1" SourceUrl="http://localhost:53695/SettleService.svc?xsd=xsd2" />
+    <MetadataFile FileName="SettleService.disco" MetadataType="Disco" ID="b7b65a2e-35a3-4e9d-bae4-9ce1e5ba8be7" SourceId="1" SourceUrl="http://localhost:53695/SettleService.svc?disco" />
+    <MetadataFile FileName="SettleService2.xsd" MetadataType="Schema" ID="51c2329d-f62c-494c-9bfc-13ec8613800f" SourceId="1" SourceUrl="http://localhost:53695/SettleService.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
