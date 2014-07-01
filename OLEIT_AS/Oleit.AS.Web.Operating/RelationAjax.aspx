@@ -1,1 +1,0 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="RelationAjax.aspx.cs" Inherits="Accounting_System.RelationAjax" %>

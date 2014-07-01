@@ -1,1 +1,0 @@
-﻿<%@ ServiceHost Language="C#" Debug="true" Service="Oleit.AS.Service.LogicService.TallyService" CodeBehind="TallyService.svc.cs" %>

@@ -1,4 +1,0 @@
-D:\Development\OLEIT_AS\Oleit.AS.Web.Menu\bin\Oleit.AS.Web.Menu.dll
-D:\Development\OLEIT_AS\Oleit.AS.Web.Menu\bin\Oleit.AS.Web.Menu.pdb
-D:\Development\OLEIT_AS\Oleit.AS.Web.Menu\obj\Debug\Oleit.AS.Web.Menu.dll
-D:\Development\OLEIT_AS\Oleit.AS.Web.Menu\obj\Debug\Oleit.AS.Web.Menu.pdb

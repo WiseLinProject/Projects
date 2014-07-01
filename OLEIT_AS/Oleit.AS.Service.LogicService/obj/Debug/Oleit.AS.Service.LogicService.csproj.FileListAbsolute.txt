@@ -1,9 +1,0 @@
-D:\Development\OLEIT_AS\Oleit.AS.Service.LogicService\bin\Oleit.AS.Service.LogicService.dll
-D:\Development\OLEIT_AS\Oleit.AS.Service.LogicService\bin\Oleit.AS.Service.LogicService.pdb
-D:\Development\OLEIT_AS\Oleit.AS.Service.LogicService\bin\Oleit.AS.Service.DataObject.dll
-D:\Development\OLEIT_AS\Oleit.AS.Service.LogicService\bin\Newtonsoft.Json.dll
-D:\Development\OLEIT_AS\Oleit.AS.Service.LogicService\bin\Oleit.AS.Service.DataObject.pdb
-D:\Development\OLEIT_AS\Oleit.AS.Service.LogicService\bin\Newtonsoft.Json.xml
-D:\Development\OLEIT_AS\Oleit.AS.Service.LogicService\obj\Debug\Oleit.AS.Service.LogicService.csprojResolveAssemblyReference.cache
-D:\Development\OLEIT_AS\Oleit.AS.Service.LogicService\obj\Debug\Oleit.AS.Service.LogicService.dll
-D:\Development\OLEIT_AS\Oleit.AS.Service.LogicService\obj\Debug\Oleit.AS.Service.LogicService.pdb

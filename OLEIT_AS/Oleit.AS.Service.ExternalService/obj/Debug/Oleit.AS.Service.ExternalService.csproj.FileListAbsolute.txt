@@ -1,4 +1,0 @@
-D:\Development\OLEIT_AS\Oleit.AS.Service.ExternalService\bin\Oleit.AS.Service.ExternalService.dll
-D:\Development\OLEIT_AS\Oleit.AS.Service.ExternalService\bin\Oleit.AS.Service.ExternalService.pdb
-D:\Development\OLEIT_AS\Oleit.AS.Service.ExternalService\obj\Debug\Oleit.AS.Service.ExternalService.dll
-D:\Development\OLEIT_AS\Oleit.AS.Service.ExternalService\obj\Debug\Oleit.AS.Service.ExternalService.pdb

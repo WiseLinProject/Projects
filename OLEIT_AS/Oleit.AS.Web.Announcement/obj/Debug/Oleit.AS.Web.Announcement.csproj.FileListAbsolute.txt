@@ -1,4 +1,0 @@
-D:\Development\OLEIT_AS\Oleit.AS.Web.Announcement\bin\Oleit.AS.Web.Announcement.dll
-D:\Development\OLEIT_AS\Oleit.AS.Web.Announcement\bin\Oleit.AS.Web.Announcement.pdb
-D:\Development\OLEIT_AS\Oleit.AS.Web.Announcement\obj\Debug\Oleit.AS.Web.Announcement.dll
-D:\Development\OLEIT_AS\Oleit.AS.Web.Announcement\obj\Debug\Oleit.AS.Web.Announcement.pdb
